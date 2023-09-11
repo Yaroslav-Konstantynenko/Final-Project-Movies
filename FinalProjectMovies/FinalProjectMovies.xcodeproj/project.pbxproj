@@ -16,9 +16,11 @@
 		2A697BB22AAF677100519306 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A697BB12AAF677100519306 /* HomeViewController.swift */; };
 		2AF0E37D2AAF680000FAFB70 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0E37C2AAF680000FAFB70 /* MoviesViewController.swift */; };
 		2AF0E37F2AAF681A00FAFB70 /* TvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0E37E2AAF681A00FAFB70 /* TvViewController.swift */; };
-		2AF0E3812AAF683000FAFB70 /* SiriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0E3802AAF683000FAFB70 /* SiriesViewController.swift */; };
+		2AF0E3812AAF683000FAFB70 /* SeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0E3802AAF683000FAFB70 /* SeriesViewController.swift */; };
 		2AF0E3832AAF684800FAFB70 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0E3822AAF684800FAFB70 /* BookmarksViewController.swift */; };
 		2AF0E3852AAF68D500FAFB70 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0E3842AAF68D500FAFB70 /* MainTabBarController.swift */; };
+		2AF0E38F2AAF7E3100FAFB70 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0E38E2AAF7E3100FAFB70 /* UIColorExtension.swift */; };
+		2AF0E3912AAF83D300FAFB70 /* ColorViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0E3902AAF83D300FAFB70 /* ColorViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +35,11 @@
 		2A697BB12AAF677100519306 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2AF0E37C2AAF680000FAFB70 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		2AF0E37E2AAF681A00FAFB70 /* TvViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvViewController.swift; sourceTree = "<group>"; };
-		2AF0E3802AAF683000FAFB70 /* SiriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriesViewController.swift; sourceTree = "<group>"; };
+		2AF0E3802AAF683000FAFB70 /* SeriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewController.swift; sourceTree = "<group>"; };
 		2AF0E3822AAF684800FAFB70 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		2AF0E3842AAF68D500FAFB70 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		2AF0E38E2AAF7E3100FAFB70 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		2AF0E3902AAF83D300FAFB70 /* ColorViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +75,7 @@
 				2A697B982AAF5B8B00519306 /* Modules */,
 				2A697B972AAF5B7F00519306 /* Common */,
 				2A697B952AAF5B6D00519306 /* Resources */,
-				2A697B942AAF5B6200519306 /* Extensoins */,
+				2A697B942AAF5B6200519306 /* Extensions */,
 				2A697B842AAF5AC100519306 /* ViewController.swift */,
 				2A697B862AAF5AC100519306 /* Main.storyboard */,
 				2A697B8E2AAF5AC300519306 /* Info.plist */,
@@ -79,19 +83,21 @@
 			path = FinalProjectMovies;
 			sourceTree = "<group>";
 		};
-		2A697B942AAF5B6200519306 /* Extensoins */ = {
+		2A697B942AAF5B6200519306 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2AF0E38E2AAF7E3100FAFB70 /* UIColorExtension.swift */,
+				2AF0E3902AAF83D300FAFB70 /* ColorViewExtension.swift */,
 			);
-			path = Extensoins;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2A697B952AAF5B6D00519306 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				2A697B802AAF5AC100519306 /* AppDelegate.swift */,
-				2A697B892AAF5AC300519306 /* Assets.xcassets */,
 				2A697B822AAF5AC100519306 /* SceneDelegate.swift */,
+				2A697B892AAF5AC300519306 /* Assets.xcassets */,
 				2A697B8B2AAF5AC300519306 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
@@ -268,7 +274,7 @@
 		2A697BAB2AAF66B200519306 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2AF0E3802AAF683000FAFB70 /* SiriesViewController.swift */,
+				2AF0E3802AAF683000FAFB70 /* SeriesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -387,7 +393,9 @@
 				2AF0E37F2AAF681A00FAFB70 /* TvViewController.swift in Sources */,
 				2A697B812AAF5AC100519306 /* AppDelegate.swift in Sources */,
 				2A697B832AAF5AC100519306 /* SceneDelegate.swift in Sources */,
-				2AF0E3812AAF683000FAFB70 /* SiriesViewController.swift in Sources */,
+				2AF0E38F2AAF7E3100FAFB70 /* UIColorExtension.swift in Sources */,
+				2AF0E3812AAF683000FAFB70 /* SeriesViewController.swift in Sources */,
+				2AF0E3912AAF83D300FAFB70 /* ColorViewExtension.swift in Sources */,
 				2A697BB22AAF677100519306 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
