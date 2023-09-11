@@ -13,6 +13,12 @@
 		2A697B882AAF5AC100519306 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A697B862AAF5AC100519306 /* Main.storyboard */; };
 		2A697B8A2AAF5AC300519306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A697B892AAF5AC300519306 /* Assets.xcassets */; };
 		2A697B8D2AAF5AC300519306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A697B8B2AAF5AC300519306 /* LaunchScreen.storyboard */; };
+		2A697BB22AAF677100519306 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A697BB12AAF677100519306 /* HomeViewController.swift */; };
+		2AF0E37D2AAF680000FAFB70 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0E37C2AAF680000FAFB70 /* MoviesViewController.swift */; };
+		2AF0E37F2AAF681A00FAFB70 /* TvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0E37E2AAF681A00FAFB70 /* TvViewController.swift */; };
+		2AF0E3812AAF683000FAFB70 /* SiriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0E3802AAF683000FAFB70 /* SiriesViewController.swift */; };
+		2AF0E3832AAF684800FAFB70 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0E3822AAF684800FAFB70 /* BookmarksViewController.swift */; };
+		2AF0E3852AAF68D500FAFB70 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0E3842AAF68D500FAFB70 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		2A697B892AAF5AC300519306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A697B8C2AAF5AC300519306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A697B8E2AAF5AC300519306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A697BB12AAF677100519306 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2AF0E37C2AAF680000FAFB70 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		2AF0E37E2AAF681A00FAFB70 /* TvViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvViewController.swift; sourceTree = "<group>"; };
+		2AF0E3802AAF683000FAFB70 /* SiriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriesViewController.swift; sourceTree = "<group>"; };
+		2AF0E3822AAF684800FAFB70 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		2AF0E3842AAF68D500FAFB70 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +107,12 @@
 		2A697B982AAF5B8B00519306 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				2A697B9C2AAF5DE000519306 /* MainTabBarController */,
+				2A697B9C2AAF5DE000519306 /* MainTabBar */,
+				2A697B9D2AAF658C00519306 /* HomeView */,
+				2A697B9E2AAF65B900519306 /* MoviesView */,
+				2A697B9F2AAF65CC00519306 /* TvView */,
+				2A697BA02AAF65D600519306 /* SeriesView */,
+				2A697BA12AAF660E00519306 /* BookmarksView */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -103,6 +120,7 @@
 		2A697B992AAF5BB500519306 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2AF0E3842AAF68D500FAFB70 /* MainTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -121,14 +139,174 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		2A697B9C2AAF5DE000519306 /* MainTabBarController */ = {
+		2A697B9C2AAF5DE000519306 /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
 				2A697B9A2AAF5BBE00519306 /* Model */,
 				2A697B9B2AAF5BC800519306 /* View */,
 				2A697B992AAF5BB500519306 /* Controllers */,
 			);
-			path = MainTabBarController;
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		2A697B9D2AAF658C00519306 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				2A697BA42AAF665F00519306 /* Model */,
+				2A697BA32AAF665600519306 /* View */,
+				2A697BA22AAF664900519306 /* Controllers */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		2A697B9E2AAF65B900519306 /* MoviesView */ = {
+			isa = PBXGroup;
+			children = (
+				2A697BA72AAF668800519306 /* Model */,
+				2A697BA62AAF668300519306 /* View */,
+				2A697BA52AAF667A00519306 /* Controllers */,
+			);
+			path = MoviesView;
+			sourceTree = "<group>";
+		};
+		2A697B9F2AAF65CC00519306 /* TvView */ = {
+			isa = PBXGroup;
+			children = (
+				2A697BAA2AAF66AB00519306 /* Model */,
+				2A697BA92AAF66A700519306 /* View */,
+				2A697BA82AAF669D00519306 /* Controllers */,
+			);
+			path = TvView;
+			sourceTree = "<group>";
+		};
+		2A697BA02AAF65D600519306 /* SeriesView */ = {
+			isa = PBXGroup;
+			children = (
+				2A697BAD2AAF66F100519306 /* Model */,
+				2A697BAC2AAF66EB00519306 /* View */,
+				2A697BAB2AAF66B200519306 /* Controllers */,
+			);
+			path = SeriesView;
+			sourceTree = "<group>";
+		};
+		2A697BA12AAF660E00519306 /* BookmarksView */ = {
+			isa = PBXGroup;
+			children = (
+				2A697BB02AAF670C00519306 /* Model */,
+				2A697BAF2AAF670700519306 /* View */,
+				2A697BAE2AAF66FC00519306 /* Controllers */,
+			);
+			path = BookmarksView;
+			sourceTree = "<group>";
+		};
+		2A697BA22AAF664900519306 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2A697BB12AAF677100519306 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2A697BA32AAF665600519306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A697BA42AAF665F00519306 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A697BA52AAF667A00519306 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2AF0E37C2AAF680000FAFB70 /* MoviesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2A697BA62AAF668300519306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A697BA72AAF668800519306 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A697BA82AAF669D00519306 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2AF0E37E2AAF681A00FAFB70 /* TvViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2A697BA92AAF66A700519306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A697BAA2AAF66AB00519306 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A697BAB2AAF66B200519306 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2AF0E3802AAF683000FAFB70 /* SiriesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2A697BAC2AAF66EB00519306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A697BAD2AAF66F100519306 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A697BAE2AAF66FC00519306 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2AF0E3822AAF684800FAFB70 /* BookmarksViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2A697BAF2AAF670700519306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A697BB02AAF670C00519306 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,9 +380,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AF0E3832AAF684800FAFB70 /* BookmarksViewController.swift in Sources */,
 				2A697B852AAF5AC100519306 /* ViewController.swift in Sources */,
+				2AF0E3852AAF68D500FAFB70 /* MainTabBarController.swift in Sources */,
+				2AF0E37D2AAF680000FAFB70 /* MoviesViewController.swift in Sources */,
+				2AF0E37F2AAF681A00FAFB70 /* TvViewController.swift in Sources */,
 				2A697B812AAF5AC100519306 /* AppDelegate.swift in Sources */,
 				2A697B832AAF5AC100519306 /* SceneDelegate.swift in Sources */,
+				2AF0E3812AAF683000FAFB70 /* SiriesViewController.swift in Sources */,
+				2A697BB22AAF677100519306 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
