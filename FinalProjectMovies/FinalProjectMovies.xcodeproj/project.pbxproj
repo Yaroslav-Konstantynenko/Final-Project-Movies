@@ -21,6 +21,10 @@
 		2AF0E3852AAF68D500FAFB70 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0E3842AAF68D500FAFB70 /* MainTabBarController.swift */; };
 		2AF0E38F2AAF7E3100FAFB70 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0E38E2AAF7E3100FAFB70 /* UIColorExtension.swift */; };
 		2AF0E3912AAF83D300FAFB70 /* ColorViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0E3902AAF83D300FAFB70 /* ColorViewExtension.swift */; };
+		2AF0E3952AB0A69200FAFB70 /* GalleryColectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0E3942AB0A69200FAFB70 /* GalleryColectionView.swift */; };
+		2AF0E3972AB0ACCB00FAFB70 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0E3962AB0ACCB00FAFB70 /* GalleryCollectionViewCell.swift */; };
+		2AF0E39A2AB0AEDC00FAFB70 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2AF0E3992AB0AEDC00FAFB70 /* Alamofire */; };
+		2AF0E39D2AB0B03E00FAFB70 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2AF0E39C2AB0B03E00FAFB70 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,8 @@
 		2AF0E3842AAF68D500FAFB70 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		2AF0E38E2AAF7E3100FAFB70 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		2AF0E3902AAF83D300FAFB70 /* ColorViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewExtension.swift; sourceTree = "<group>"; };
+		2AF0E3942AB0A69200FAFB70 /* GalleryColectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryColectionView.swift; sourceTree = "<group>"; };
+		2AF0E3962AB0ACCB00FAFB70 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AF0E39D2AB0B03E00FAFB70 /* RealmSwift in Frameworks */,
+				2AF0E39A2AB0AEDC00FAFB70 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +231,8 @@
 		2A697BA42AAF665F00519306 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2AF0E3942AB0A69200FAFB70 /* GalleryColectionView.swift */,
+				2AF0E3962AB0ACCB00FAFB70 /* GalleryCollectionViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -331,6 +341,10 @@
 			dependencies = (
 			);
 			name = FinalProjectMovies;
+			packageProductDependencies = (
+				2AF0E3992AB0AEDC00FAFB70 /* Alamofire */,
+				2AF0E39C2AB0B03E00FAFB70 /* RealmSwift */,
+			);
 			productName = FinalProjectMovies;
 			productReference = 2A697B7D2AAF5AC100519306 /* FinalProjectMovies.app */;
 			productType = "com.apple.product-type.application";
@@ -359,6 +373,10 @@
 				Base,
 			);
 			mainGroup = 2A697B742AAF5AC100519306;
+			packageReferences = (
+				2AF0E3982AB0AEDC00FAFB70 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2AF0E39B2AB0B03E00FAFB70 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 2A697B7E2AAF5AC100519306 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -386,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AF0E3952AB0A69200FAFB70 /* GalleryColectionView.swift in Sources */,
 				2AF0E3832AAF684800FAFB70 /* BookmarksViewController.swift in Sources */,
 				2A697B852AAF5AC100519306 /* ViewController.swift in Sources */,
 				2AF0E3852AAF68D500FAFB70 /* MainTabBarController.swift in Sources */,
@@ -396,6 +415,7 @@
 				2AF0E38F2AAF7E3100FAFB70 /* UIColorExtension.swift in Sources */,
 				2AF0E3812AAF683000FAFB70 /* SeriesViewController.swift in Sources */,
 				2AF0E3912AAF83D300FAFB70 /* ColorViewExtension.swift in Sources */,
+				2AF0E3972AB0ACCB00FAFB70 /* GalleryCollectionViewCell.swift in Sources */,
 				2A697BB22AAF677100519306 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -612,6 +632,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2AF0E3982AB0AEDC00FAFB70 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		2AF0E39B2AB0B03E00FAFB70 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2AF0E3992AB0AEDC00FAFB70 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AF0E3982AB0AEDC00FAFB70 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		2AF0E39C2AB0B03E00FAFB70 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AF0E39B2AB0B03E00FAFB70 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2A697B752AAF5AC100519306 /* Project object */;
 }

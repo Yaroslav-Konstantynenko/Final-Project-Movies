@@ -9,10 +9,11 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var dayWeekSegmentedControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.customColorGradientGreen()
-
-        // Do any additional setup after loading the view.
+        
     }
 }

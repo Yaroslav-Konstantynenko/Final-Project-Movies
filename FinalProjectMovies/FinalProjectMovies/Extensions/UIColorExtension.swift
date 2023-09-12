@@ -13,7 +13,7 @@ extension UIColor {
     }
     
     static var tabBarItemAccent: UIColor {
-        #colorLiteral(red: 0.4013218735, green: 0.2507757698, blue: 0.08890448004, alpha: 1)
+        #colorLiteral(red: 0.5344706834, green: 0.3344939789, blue: 0.07314550394, alpha: 1)
     }
     
     static var tabBarItemLight: UIColor {

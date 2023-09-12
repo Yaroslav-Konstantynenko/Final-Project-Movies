@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dz0-NC-vu1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Y6-pE-hmH">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="InM-US-hKq"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" red="0.1079349294" green="0.24751666189999999" blue="0.2441087961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Movies" image="film" catalog="system" id="3YV-Tn-M17"/>
                 </viewController>
@@ -31,30 +30,47 @@
                     <view key="view" contentMode="scaleToFill" id="aeA-iW-Wlk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's trending now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhg-Ex-q2k">
+                                <rect key="frame" x="110.00000000000001" y="110" width="173.33333333333337" height="22"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <color key="textColor" red="0.37193247680000002" green="0.40543895959999998" blue="0.31395155190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="34D-bt-TGA">
+                                <rect key="frame" x="113" y="140" width="167" height="32"/>
+                                <segments>
+                                    <segment title="Today"/>
+                                    <segment title="This Week"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.53447068339646464" green="0.33449397887789351" blue="0.073145503940790446" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMB-iL-quc">
+                                <rect key="frame" x="153.66666666666666" y="75" width="86" height="27"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                <color key="textColor" red="0.53447068340000004" green="0.3500421474" blue="0.060893924939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Wr7-3U-PK8"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <color key="backgroundColor" red="0.1079349294" green="0.24751666189999999" blue="0.2441087961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lhg-Ex-q2k" firstAttribute="centerX" secondItem="aeA-iW-Wlk" secondAttribute="centerX" id="PyV-Dl-BdD"/>
+                            <constraint firstItem="UMB-iL-quc" firstAttribute="top" secondItem="Wr7-3U-PK8" secondAttribute="top" constant="16" id="ZX4-2q-Olk"/>
+                            <constraint firstItem="lhg-Ex-q2k" firstAttribute="top" secondItem="UMB-iL-quc" secondAttribute="bottom" constant="8" id="csq-PF-zD3"/>
+                            <constraint firstItem="UMB-iL-quc" firstAttribute="centerX" secondItem="aeA-iW-Wlk" secondAttribute="centerX" id="t0R-xg-up1"/>
+                            <constraint firstItem="34D-bt-TGA" firstAttribute="top" secondItem="lhg-Ex-q2k" secondAttribute="bottom" constant="8" id="vTi-kf-gOB"/>
+                            <constraint firstItem="34D-bt-TGA" firstAttribute="centerX" secondItem="aeA-iW-Wlk" secondAttribute="centerX" id="wKi-6C-sqL"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="nRw-Uv-n1z"/>
+                    <connections>
+                        <outlet property="dayWeekSegmentedControl" destination="34D-bt-TGA" id="Jff-v2-vqV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbE-IQ-VHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1158" y="711"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="wZH-ZB-PI1">
-            <objects>
-                <navigationController id="Dz0-NC-vu1" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U4T-11-3ia">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="3Y6-pE-hmH" kind="relationship" relationship="rootViewController" id="9k2-PZ-d1i"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h65-bN-aBX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="282" y="-750"/>
+            <point key="canvasLocation" x="-1158.0152671755725" y="710.56338028169023"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="5rQ-ht-uHM">
@@ -86,7 +102,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="K2F-Er-ebu"/>
-                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <color key="backgroundColor" red="0.1079349294" green="0.24751666189999999" blue="0.2441087961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Bookmarks" image="bookmark.fill" catalog="system" id="dYh-rV-bKR"/>
                 </viewController>
@@ -102,7 +118,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="5XE-wM-0bq"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" red="0.1079349294" green="0.24751666189999999" blue="0.2441087961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="TV" image="tv" catalog="system" id="ge1-oh-nhm"/>
                 </viewController>
@@ -118,7 +134,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="vA7-Es-ztd"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" red="0.1079349294" green="0.24751666189999999" blue="0.2441087961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Series" image="popcorn" catalog="system" id="5OH-Sa-9bJ"/>
                 </viewController>
@@ -133,20 +149,5 @@
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="popcorn" catalog="system" width="102" height="128"/>
         <image name="tv" catalog="system" width="128" height="95"/>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
