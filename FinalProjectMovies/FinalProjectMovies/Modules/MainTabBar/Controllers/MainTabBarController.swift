@@ -15,35 +15,35 @@ class MainTabBarController: UITabBarController {
         setTabBarAppearance()
     }
     
-    private func generateTabBar() {
-        viewControllers = [
-            generateVC(
-                viewController: HomeViewController(),
-                title: "Home",
-                image: UIImage(systemName: "house")
-            ),
-            generateVC(
-                viewController: MoviesViewController(),
-                title: "Movies",
-                image: UIImage(systemName: "film")
-            ),
-            generateVC(
-                viewController: TvViewController(),
-                title: "TV",
-                image: UIImage(systemName: "tv")
-            ),
-            generateVC(
-                viewController: SeriesViewController(),
-                title: "Series",
-                image: UIImage(systemName: "popcorn")
-            ),
-            generateVC(
-                viewController: BookmarksViewController(),
-                title: "Bookmarks",
-                image: UIImage(systemName: "bookmark.square")
-            )
-        ]
-    }
+//    private func generateTabBar() {
+//        viewControllers = [
+//            generateVC(
+//                viewController: HomeViewController(),
+//                title: "Home",
+//                image: UIImage(systemName: "house")
+//            ),
+//            generateVC(
+//                viewController: MoviesViewController(),
+//                title: "Movies",
+//                image: UIImage(systemName: "film")
+//            ),
+//            generateVC(
+//                viewController: TvViewController(),
+//                title: "TV",
+//                image: UIImage(systemName: "tv")
+//            ),
+//            generateVC(
+//                viewController: SeriesViewController(),
+//                title: "Series",
+//                image: UIImage(systemName: "popcorn")
+//            ),
+//            generateVC(
+//                viewController: BookmarksViewController(),
+//                title: "Bookmarks",
+//                image: UIImage(systemName: "bookmark.square")
+//            )
+//        ]
+//    }
     
     private func generateVC(viewController: UIViewController, title: String, image: UIImage?) -> UIViewController {
         viewController.tabBarItem.title = title

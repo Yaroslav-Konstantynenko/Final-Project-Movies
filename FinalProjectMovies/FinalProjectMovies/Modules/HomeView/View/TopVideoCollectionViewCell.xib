@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopVideoCollectionViewCell" id="gTV-IL-0wX" customClass="TopVideoCollectionViewCell" customModule="FinalProjectMovies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="240"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="240"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="joker" translatesAutoresizingMaskIntoConstraints="NO" id="Shq-Dc-QCx">
+                        <rect key="frame" x="0.0" y="5" width="155" height="235"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="155" id="67v-Hg-S47"/>
+                            <constraint firstAttribute="height" constant="235" id="HPT-2g-BGG"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rib-EH-7pI">
+                        <rect key="frame" x="125" y="0.0" width="35" height="35"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxp-8I-aPH">
+                                <rect key="frame" x="6.6666666666666572" y="26" width="22" height="7"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Italic" family="Rockwell" pointSize="7"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7R-7C-B69">
+                                <rect key="frame" x="4.6666666666666572" y="5.9999999999999982" width="26" height="23.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.53447068340000004" green="0.3397556934" blue="0.087867896649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="636-hU-eZC"/>
+                            <constraint firstAttribute="width" constant="35" id="MbH-7Y-VEw"/>
+                            <constraint firstAttribute="bottom" secondItem="uxp-8I-aPH" secondAttribute="bottom" constant="2" id="Mh0-Zy-ouI"/>
+                            <constraint firstItem="U7R-7C-B69" firstAttribute="centerY" secondItem="rib-EH-7pI" secondAttribute="centerY" id="PzA-Xz-bhH"/>
+                            <constraint firstItem="U7R-7C-B69" firstAttribute="centerX" secondItem="rib-EH-7pI" secondAttribute="centerX" id="Ztt-uv-qr8"/>
+                            <constraint firstItem="uxp-8I-aPH" firstAttribute="centerX" secondItem="rib-EH-7pI" secondAttribute="centerX" id="o3n-BR-E7h"/>
+                        </constraints>
+                    </view>
+                    <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nt-H4-311">
+                        <rect key="frame" x="0.0" y="180" width="155" height="60"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Film" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGk-TR-HVv">
+                                <rect key="frame" x="2" y="1" width="97" height="12.333333333333334"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25.07.2019" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="typ-z6-tnF">
+                                <rect key="frame" x="104" y="2.3333333333333428" width="50" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="qgY-Me-CcE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2u7-qm-fvO">
+                                <rect key="frame" x="2" y="14.333333333333339" width="151" height="43.666666666666657"/>
+                                <string key="text">Your movies Your movies Your Your movies Your movies Your movies Your movies Your movies Your movies Your movies Your Your movies Your movies Your movies Your movies Your movies Your movies Your movies Your Your movies Your movies Your movies Your movies Your movies</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1079349294" green="0.24751666189999999" blue="0.2441087961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HGk-TR-HVv" firstAttribute="width" secondItem="0nt-H4-311" secondAttribute="width" multiplier="1:1.6" id="DuO-IZ-psF"/>
+                            <constraint firstItem="HGk-TR-HVv" firstAttribute="top" secondItem="0nt-H4-311" secondAttribute="top" constant="1" id="ENu-O4-4Yx"/>
+                            <constraint firstItem="HGk-TR-HVv" firstAttribute="leading" secondItem="0nt-H4-311" secondAttribute="leading" constant="2" id="G0F-n7-fDK"/>
+                            <constraint firstAttribute="height" constant="60" id="Zbe-0w-s7D"/>
+                            <constraint firstItem="2u7-qm-fvO" firstAttribute="top" secondItem="HGk-TR-HVv" secondAttribute="bottom" constant="1" id="buJ-a5-1pr"/>
+                            <constraint firstAttribute="trailing" secondItem="typ-z6-tnF" secondAttribute="trailing" constant="1" id="iqX-90-XgL"/>
+                            <constraint firstItem="typ-z6-tnF" firstAttribute="centerY" secondItem="HGk-TR-HVv" secondAttribute="centerY" id="nwx-ss-oBQ"/>
+                            <constraint firstAttribute="bottom" secondItem="2u7-qm-fvO" secondAttribute="bottom" constant="2" id="ru4-Pf-5nX"/>
+                            <constraint firstAttribute="trailing" secondItem="2u7-qm-fvO" secondAttribute="trailing" constant="2" id="sZM-21-9C6"/>
+                            <constraint firstItem="2u7-qm-fvO" firstAttribute="leading" secondItem="0nt-H4-311" secondAttribute="leading" constant="2" id="t8e-xy-UKk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Shq-Dc-QCx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="190-s1-FFR"/>
+                <constraint firstAttribute="bottom" secondItem="0nt-H4-311" secondAttribute="bottom" id="34b-VI-nNx"/>
+                <constraint firstAttribute="bottom" secondItem="Shq-Dc-QCx" secondAttribute="bottom" id="CXz-HJ-UyU"/>
+                <constraint firstItem="rib-EH-7pI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Rmf-fa-aoc"/>
+                <constraint firstAttribute="trailing" secondItem="rib-EH-7pI" secondAttribute="trailing" id="TEa-EQ-AAH"/>
+                <constraint firstAttribute="trailing" secondItem="Shq-Dc-QCx" secondAttribute="trailing" constant="5" id="XEL-zn-3Uq"/>
+                <constraint firstAttribute="trailing" secondItem="0nt-H4-311" secondAttribute="trailing" constant="5" id="eGW-Vk-olo"/>
+                <constraint firstItem="0nt-H4-311" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tmb-zr-HhC"/>
+                <constraint firstItem="Shq-Dc-QCx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zpe-7V-9G6"/>
+            </constraints>
+            <size key="customSize" width="286" height="298"/>
+            <connections>
+                <outlet property="dataMovieLabel" destination="typ-z6-tnF" id="EQd-qI-NQa"/>
+                <outlet property="descriptionMovieLabel" destination="2u7-qm-fvO" id="2rC-c2-xFh"/>
+                <outlet property="descriptionView" destination="0nt-H4-311" id="OnD-lZ-Ubw"/>
+                <outlet property="mainImageView" destination="Shq-Dc-QCx" id="zpY-sz-cOM"/>
+                <outlet property="numberRatingLabel" destination="U7R-7C-B69" id="6Nj-jn-IzP"/>
+                <outlet property="ratingView" destination="rib-EH-7pI" id="ng8-Hh-kqt"/>
+                <outlet property="titleMovieLabel" destination="HGk-TR-HVv" id="HG4-4D-qhH"/>
+            </connections>
+            <point key="canvasLocation" x="129.7709923664122" y="68.309859154929583"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="joker" width="252" height="366"/>
+    </resources>
+</document>
