@@ -8,9 +8,19 @@
 import UIKit
 
 class BookmarksViewController: UIViewController {
+    
+    @IBOutlet weak var bookmarksTableView: UITableView!
+    var bookmarksSaveList: [Any] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.customColorGradientGreen()
+        registerBookmarksCell()
+        
+    }
+    
+    func registerBookmarksCell() {
     }
 }
+

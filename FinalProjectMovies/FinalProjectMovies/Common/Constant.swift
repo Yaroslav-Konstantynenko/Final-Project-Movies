@@ -5,7 +5,7 @@
 //  Created by Yaroslav Konstantynenko on 12.09.2023.
 //
 
-import Foundation
+import UIKit
 
 struct Constant {
     
@@ -20,7 +20,6 @@ struct Constant {
         static let popularTvDay = "trending/tv/day"
         static let popularTvWeek = "trending/tv/week"
         
-        
-        static let defaultImagePath = "https://image.tmdb.org/t/p/original/"
+        static let defaultImagePath = "https://image.tmdb.org/t/p/w500/"
     }
 }

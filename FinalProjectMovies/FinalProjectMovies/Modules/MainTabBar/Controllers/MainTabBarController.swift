@@ -44,13 +44,13 @@ class MainTabBarController: UITabBarController {
 //            )
 //        ]
 //    }
-    
-    private func generateVC(viewController: UIViewController, title: String, image: UIImage?) -> UIViewController {
-        viewController.tabBarItem.title = title
-        viewController.tabBarItem.image = image
-        
-        return viewController
-    }
+//
+//    private func generateVC(viewController: UIViewController, title: String, image: UIImage?) -> UIViewController {
+//        viewController.tabBarItem.title = title
+//        viewController.tabBarItem.image = image
+//
+//        return viewController
+//    }
     
     private func setTabBarAppearance() {
         let positionOnX: CGFloat = 10
@@ -74,7 +74,7 @@ class MainTabBarController: UITabBarController {
         roundLayer.path = bezierPath.cgPath
         
         tabBar.layer.insertSublayer(roundLayer, at: 0)
-        tabBar.itemWidth = width / 9
+        tabBar.itemWidth = width / 6.5
         tabBar.itemPositioning = .centered
         
         roundLayer.fillColor = UIColor.mainTabBarColor.cgColor

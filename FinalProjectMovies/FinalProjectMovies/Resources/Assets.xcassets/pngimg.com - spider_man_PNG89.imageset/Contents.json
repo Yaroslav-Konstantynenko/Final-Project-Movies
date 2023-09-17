@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "pngimg.com - spider_man_PNG89.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "pngimg.com - spider_man_PNG89 1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "pngimg.com - spider_man_PNG89 2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

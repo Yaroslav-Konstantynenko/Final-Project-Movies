@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="AllMoviesCollectionViewCell" reuseIdentifier="AllMoviesCollectionViewCell" id="gTV-IL-0wX" customClass="AllMoviesCollectionViewCell" customModule="FinalProjectMovies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="416" height="280"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="416" height="280"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="joker" translatesAutoresizingMaskIntoConstraints="NO" id="3T5-pT-KWM">
+                        <rect key="frame" x="0.0" y="0.0" width="416" height="280"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARm-ZY-Veo">
+                        <rect key="frame" x="15.999999999999996" y="241" width="41.666666666666657" height="23"/>
+                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="19"/>
+                        <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dH4-Cp-iyM">
+                        <rect key="frame" x="355" y="229" width="45" height="35"/>
+                        <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="0.15144196567156457" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="D7f-18-6nF"/>
+                            <constraint firstAttribute="width" constant="45" id="elA-CG-Sro"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="bookmark.fill" catalog="system">
+                            <color key="baseForegroundColor" red="0.070091743160026837" green="0.48572817716770056" blue="0.36090029973571935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </buttonConfiguration>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ENT-PP-IjE">
+                        <rect key="frame" x="353" y="-57" width="120" height="120"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btM-H2-4Bb">
+                                <rect key="frame" x="25" y="76" width="26.333333333333329" height="19"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="19"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.53447068340000004" green="0.33449397889999999" blue="0.073145503939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="1oj-S9-C85"/>
+                            <constraint firstItem="btM-H2-4Bb" firstAttribute="leading" secondItem="ENT-PP-IjE" secondAttribute="leading" constant="25" id="LIb-y1-5Jf"/>
+                            <constraint firstAttribute="height" constant="120" id="Rux-lb-gtK"/>
+                            <constraint firstAttribute="bottom" secondItem="btM-H2-4Bb" secondAttribute="bottom" constant="25" id="pBF-sS-Ni1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ENT-PP-IjE" secondAttribute="trailing" constant="-57" id="1ec-Ud-VYk"/>
+                <constraint firstAttribute="bottom" secondItem="dH4-Cp-iyM" secondAttribute="bottom" constant="16" id="9eH-qd-AUf"/>
+                <constraint firstItem="ENT-PP-IjE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="-57" id="AtQ-24-ejY"/>
+                <constraint firstItem="3T5-pT-KWM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Jrx-hS-wTY"/>
+                <constraint firstItem="ARm-ZY-Veo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="Lf3-qD-qvq"/>
+                <constraint firstAttribute="bottom" secondItem="ARm-ZY-Veo" secondAttribute="bottom" constant="16" id="Nuy-We-lcC"/>
+                <constraint firstAttribute="bottom" secondItem="3T5-pT-KWM" secondAttribute="bottom" id="QNf-Mj-WF2"/>
+                <constraint firstItem="3T5-pT-KWM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aGL-A9-piQ"/>
+                <constraint firstAttribute="trailing" secondItem="3T5-pT-KWM" secondAttribute="trailing" id="dcP-z7-Xef"/>
+                <constraint firstAttribute="trailing" secondItem="dH4-Cp-iyM" secondAttribute="trailing" constant="16" id="hfT-TZ-hAJ"/>
+            </constraints>
+            <size key="customSize" width="416" height="280"/>
+            <connections>
+                <outlet property="mainImageView" destination="3T5-pT-KWM" id="uEr-qI-oFU"/>
+                <outlet property="reitingLabel" destination="btM-H2-4Bb" id="YnZ-Lb-4XE"/>
+                <outlet property="reitingView" destination="ENT-PP-IjE" id="ah0-iu-kV9"/>
+                <outlet property="seveMovieButton" destination="dH4-Cp-iyM" id="1LF-s5-z61"/>
+                <outlet property="titleLabel" destination="ARm-ZY-Veo" id="yzn-HL-SZF"/>
+            </connections>
+            <point key="canvasLocation" x="-609" y="111"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="bookmark.fill" catalog="system" width="110" height="128"/>
+        <image name="joker" width="252" height="366"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

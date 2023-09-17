@@ -6,46 +6,49 @@
 //
 
 import UIKit
-import Kingfisher
 import Alamofire
 
 class MoviesViewController: UIViewController {
     
-    @IBOutlet weak var imageTest: UIImageView!
-    var moviesTop: [ModelMovies] = []
+    @IBOutlet weak var genresCollectionView: UICollectionView!
+    @IBOutlet weak var allMoviesCollectionView: UICollectionView!
+    
+    var moviesGenresScrrenCollection: [Genres] = []
+    var allMoviesScrrenCollection: [AllMovies] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.customColorGradientGreen()
         
+        registerCell()
         
-        
-        let urlMovies = Constant.network.baseUrlMovie + "trending/movie/week" + Constant.network.apiKey
-        
-        AF.request(urlMovies).responseJSON { response in
-            switch response.result {
-            case .success(_):
-                let decoder = JSONDecoder()
-                if let data = response.data {
-                    do {
-                        let movie = try decoder.decode(ModelMovies.self, from: data)
-                        self.moviesTop.append(movie)
-                        //print(movie)
-                        print("Work data")
-                    } catch {
-                        print("Помилка декодування: \(error)")
-                    }
-                }
+        GetNetworkData.shered.getGenresMovies { result in
+            switch result {
+            case .success(let ganre):
+                self.moviesGenresScrrenCollection = ganre
+                self.genresCollectionView.reloadData()
                 
             case .failure(let error):
-                print("Помилка запиту: \(error)")
+                print("Помилка, данні не додалися в колекцію Genres: \(error)")
             }
         }
         
-        if let posterPath = self.moviesTop.first?.results.first?.backdropPath {
-            let urlString = Constant.network.defaultImagePath + posterPath
-         
-            imageTest.kf.setImage(with: URL(string: urlString))
+        GetNetworkData.shered.getAllMovies { result in
+            switch result {
+            case .success(let allMovies):
+                self.allMoviesScrrenCollection = allMovies
+                self.allMoviesCollectionView.reloadData()
+                
+            case .failure(let error):
+                print("Помилка, данні не додалися в колекцію AllMovies: \(error)")
+            }
         }
     }
+    
+    private func registerCell() {
+        genresCollectionView.register(UINib(nibName: "GenresCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GenresCollectionViewCell")
+        
+        allMoviesCollectionView.register(UINib(nibName: "AllMoviesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AllMoviesCollectionViewCell")
+    }
 }
+

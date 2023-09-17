@@ -9,15 +9,14 @@ import UIKit
 import Kingfisher
 
 class TopVideoCollectionViewCell: UICollectionViewCell {
-
-    @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var mainImageView: UIImageView!
-    @IBOutlet weak var ratingView: UIView!
-    @IBOutlet weak var numberRatingLabel: UILabel!
-    @IBOutlet weak var descriptionView: UIView!
-    @IBOutlet weak var titleMovieLabel: UILabel!
-    @IBOutlet weak var descriptionMovieLabel: UILabel!
-    @IBOutlet weak var dataMovieLabel: UILabel!
+    
+    @IBOutlet private weak var mainImageView: UIImageView!
+    @IBOutlet private weak var ratingView: UIView!
+    @IBOutlet private weak var numberRatingLabel: UILabel!
+    @IBOutlet private weak var descriptionView: UIView!
+    @IBOutlet private weak var titleMovieLabel: UILabel!
+    @IBOutlet private weak var descriptionMovieLabel: UILabel!
+    @IBOutlet private weak var dataMovieLabel: UILabel!
     
     
     override func awakeFromNib() {
@@ -25,8 +24,8 @@ class TopVideoCollectionViewCell: UICollectionViewCell {
         // Initialization code
         configurCell()
     }
-
-    func updateDataMovie(model: Result) {
+    
+    func updateDataMovie(model: TopMovies) {
         let posterPath = model.backdropPath
         let urlString = Constant.network.defaultImagePath + posterPath
         mainImageView.kf.setImage(with: URL(string: urlString))
@@ -39,8 +38,21 @@ class TopVideoCollectionViewCell: UICollectionViewCell {
         dataMovieLabel.text = model.releaseDate
     }
     
+    func updateDataTv(model: TopTv) {
+        let posterPath = model.backdropPath
+        let urlString = Constant.network.defaultImagePath + posterPath
+        mainImageView.kf.setImage(with: URL(string: urlString))
+        
+        let formatDouble = String(format: "%.1f", model.voteAverage)
+        
+        numberRatingLabel.text = formatDouble
+        titleMovieLabel.text = model.originalName
+        descriptionMovieLabel.text = model.overview
+        dataMovieLabel.text = model.firstAirDate
+        
+    }
+    
     private func configurCell() {
-//        mainView.layer.cornerRadius = 6
         ratingView.layer.cornerRadius = 6
         mainImageView.layer.cornerRadius = 6
         descriptionView.layer.cornerRadius = 5

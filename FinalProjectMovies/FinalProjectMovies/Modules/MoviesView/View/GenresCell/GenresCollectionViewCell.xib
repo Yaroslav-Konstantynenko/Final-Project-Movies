@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="GenresCollectionViewCell" reuseIdentifier="GenresCollectionViewCell" id="DgJ-gt-cYn" customClass="GenresCollectionViewCell" customModule="FinalProjectMovies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="43"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QX9-3W-P6D">
+                <rect key="frame" x="0.0" y="0.0" width="140" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxq-i4-Nhs">
+                        <rect key="frame" x="8" y="14" width="124" height="21"/>
+                        <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.53447068340000004" green="0.33449397889999999" blue="0.073145503939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Yxq-i4-Nhs" secondAttribute="trailing" constant="8" id="Cno-GU-F3c"/>
+                    <constraint firstItem="Yxq-i4-Nhs" firstAttribute="top" secondItem="QX9-3W-P6D" secondAttribute="top" constant="14" id="dHc-Db-af3"/>
+                    <constraint firstItem="Yxq-i4-Nhs" firstAttribute="leading" secondItem="QX9-3W-P6D" secondAttribute="leading" constant="8" id="dfD-yu-pvx"/>
+                    <constraint firstAttribute="bottom" secondItem="Yxq-i4-Nhs" secondAttribute="bottom" constant="8" id="vDi-3b-2md"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="269" height="64"/>
+            <connections>
+                <outlet property="mainContentView" destination="QX9-3W-P6D" id="3Yf-ZW-R3r"/>
+                <outlet property="titleLable" destination="Yxq-i4-Nhs" id="A0H-Um-nnl"/>
+            </connections>
+            <point key="canvasLocation" x="755.72519083969462" y="20.422535211267608"/>
+        </collectionViewCell>
+    </objects>
+</document>
