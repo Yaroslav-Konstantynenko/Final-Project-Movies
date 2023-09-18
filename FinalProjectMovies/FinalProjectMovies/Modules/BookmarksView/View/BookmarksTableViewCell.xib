@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="350" height="70"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RrB-e4-Zgo">
+                    <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RrB-e4-Zgo">
                         <rect key="frame" x="0.0" y="0.0" width="350" height="70"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pngimg.com - madagascar_penguins_PNG10" translatesAutoresizingMaskIntoConstraints="NO" id="Ugy-GK-JMY">
@@ -44,7 +44,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.32764704538633993" green="0.085342133841082884" blue="0.14425824489291825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.16067842409017105" green="0.10391972953890548" blue="0.23681531864777461" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ugy-GK-JMY" firstAttribute="top" secondItem="RrB-e4-Zgo" secondAttribute="top" constant="5" id="2or-wR-pdO"/>
                             <constraint firstAttribute="bottom" secondItem="Ugy-GK-JMY" secondAttribute="bottom" constant="2" id="3B6-oJ-X3H"/>
@@ -57,6 +57,7 @@
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="RrB-e4-Zgo" secondAttribute="trailing" id="1PY-4D-1RN"/>
                     <constraint firstItem="RrB-e4-Zgo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="JMo-mL-Pxp"/>

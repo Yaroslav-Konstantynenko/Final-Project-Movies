@@ -9,22 +9,25 @@ import UIKit
 
 class BookmarksTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var mainImageView: UIImageView!
-    @IBOutlet weak var backgroundLabelView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    
+    @IBOutlet private weak var mainView: UIView!
+    @IBOutlet private weak var mainImageView: UIImageView!
+    @IBOutlet private weak var backgroundLabelView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+//        updateListBookmarks()
+    }
+    
+    private func updateListBookmarks() {
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        mainView.layer.cornerRadius = 5
+        mainView.layer.cornerRadius = 5
+        backgroundLabelView.layer.cornerRadius = 5
     }
-    
 }

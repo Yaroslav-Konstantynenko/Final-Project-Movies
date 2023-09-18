@@ -17,6 +17,8 @@ class HomeViewController: UIViewController {
     var homeScreenMoviesCollection: [TopMovies] = []
     var homeScreenTvCollection: [TopTv] = []
     
+    var saveMovies: [ModelRealmMovies] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.customColorGradientGreen()
@@ -27,6 +29,8 @@ class HomeViewController: UIViewController {
             case .success(let movies):
                 self.homeScreenMoviesCollection = movies
                 self.moviesCollectionView.reloadData()
+                
+//                saveMovies = RealmManegerMovies.shered.saveRealmMovies(movies)
                 
             case .failure(let error):
                 print("Помилка, данні не додалися в колекцію Movies: \(error)")

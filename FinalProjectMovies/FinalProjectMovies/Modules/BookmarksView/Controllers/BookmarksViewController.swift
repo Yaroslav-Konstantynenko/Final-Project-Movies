@@ -10,7 +10,7 @@ import UIKit
 class BookmarksViewController: UIViewController {
     
     @IBOutlet weak var bookmarksTableView: UITableView!
-    var bookmarksSaveList: [Any] = []
+    var bookmarksSaveList: [String] = ["Hi", "Hi", "Hi", "Hi", "Hi", "Hi",]
 
     override func viewDidLoad() {
         super.viewDidLoad()

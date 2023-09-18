@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-final class ScreenPresentViewController: UIViewController {
+class ScreenPresentViewController: UIViewController {
     
     @IBOutlet private weak var mainImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
@@ -33,7 +33,6 @@ final class ScreenPresentViewController: UIViewController {
         
         configurePresentView()
         getDataScreenViewController()
-        
     }
     
     private func getDataScreenViewController() {
