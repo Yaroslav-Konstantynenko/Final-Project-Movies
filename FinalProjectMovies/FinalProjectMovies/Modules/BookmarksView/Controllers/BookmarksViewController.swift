@@ -21,6 +21,7 @@ class BookmarksViewController: UIViewController {
     }
     
     func registerBookmarksCell() {
+        bookmarksTableView.register(UINib(nibName: "BookmarksTableViewCell", bundle: nil), forCellReuseIdentifier: "BookmarksTableViewCell")
     }
 }
 

@@ -92,6 +92,8 @@ class GetNetworkData {
             }
         }
     }
+    
+    //MARK: Get All Movies
     func getAllMovies(completion: @escaping (Result<[AllMovies], Error>) -> Void) {
         let urlMovies = Constant.network.baseUrlMovie + "trending/movie/week" + Constant.network.apiKey
         
@@ -105,6 +107,32 @@ class GetNetworkData {
                         let allMovies = try decoder.decode(ModelAllMovies.self, from: data)
                         completion(.success(allMovies.results))
                         print("Працює Всі Фільми!")
+                        return
+                    } catch {
+                        completion(.failure(error))
+                    }
+                }
+                
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    //MARK: Get All TV
+    func getAllTv(completion: @escaping (Result<[TvWeek], Error>) -> Void) {
+        let urlTvWeek = Constant.network.baseUrlMovie + "trending/tv/week" + Constant.network.apiKey
+        
+        AF.request(urlTvWeek).responseJSON { response in
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                
+                if let data = response.data {
+                    do {
+                        let tvWeek = try decoder.decode(ModelTvWeek.self, from: data)
+                        completion(.success(tvWeek.results))
+                        print("Працює Всі Tv!")
                         return
                     } catch {
                         completion(.failure(error))
