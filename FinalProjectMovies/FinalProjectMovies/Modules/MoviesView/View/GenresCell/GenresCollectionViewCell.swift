@@ -12,7 +12,7 @@ class GenresCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var mainContentView: UIView!
     @IBOutlet private weak var titleLable: UILabel!
     
-    var idGenres = 0
+    //var idGenres = 44
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,10 +22,11 @@ class GenresCollectionViewCell: UICollectionViewCell {
     
     func updateGenresCell(model: Genres) {
         titleLable.text = model.name
-        idGenres = model.id
+        //idGenres = model.id
     }
     
     private func configurCell() {
-        mainContentView.layer.cornerRadius = 6
+        mainContentView.layer.cornerRadius = 10
+        mainContentView.customColorGradientRed()
     }
 }

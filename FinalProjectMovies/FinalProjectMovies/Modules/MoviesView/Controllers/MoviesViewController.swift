@@ -16,9 +16,11 @@ class MoviesViewController: UIViewController {
     var moviesGenresScrrenCollection: [Genres] = []
     var allMoviesScrrenCollection: [AllMovies] = []
     
+    var idGenres = 44
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.customColorGradientGreen()
+        view.customColorGradientMainView()
         
         registerCell()
         

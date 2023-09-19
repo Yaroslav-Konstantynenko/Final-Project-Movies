@@ -19,7 +19,7 @@
                     <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RrB-e4-Zgo">
                         <rect key="frame" x="0.0" y="0.0" width="345" height="65"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pngimg.com - madagascar_penguins_PNG10" translatesAutoresizingMaskIntoConstraints="NO" id="Ugy-GK-JMY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="madagascar_penguins_PNG10" translatesAutoresizingMaskIntoConstraints="NO" id="Ugy-GK-JMY">
                                 <rect key="frame" x="5" y="5" width="70" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="cGQ-zm-3mz"/>
@@ -35,7 +35,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.38938711145227256" green="0.10142355149996404" blue="0.17144150106952222" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.47617501921643768" green="0.12402917344739678" blue="0.20965295888146224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="b0k-9T-kfU" secondAttribute="bottom" constant="8" id="Waa-RT-cq6"/>
                                     <constraint firstItem="b0k-9T-kfU" firstAttribute="top" secondItem="yXJ-JJ-9LQ" secondAttribute="top" constant="8" id="e3O-MU-nkf"/>
@@ -77,6 +77,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="pngimg.com - madagascar_penguins_PNG10" width="187.33332824707031" height="361.33334350585938"/>
+        <image name="madagascar_penguins_PNG10" width="187.33332824707031" height="361.33334350585938"/>
     </resources>
 </document>

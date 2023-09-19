@@ -14,6 +14,8 @@ extension MoviesViewController: UICollectionViewDataSource {
             return moviesGenresScrrenCollection.count
         } else {
             return allMoviesScrrenCollection.count
+//            let genre = moviesGenresScrrenCollection[idGenres]
+//            return genre.name.count
         }
     }
     
@@ -30,6 +32,8 @@ extension MoviesViewController: UICollectionViewDataSource {
         } else {
             guard let cellAllMovies = collectionView.dequeueReusableCell(withReuseIdentifier: "AllMoviesCollectionViewCell", for: indexPath) as? AllMoviesCollectionViewCell else { return UICollectionViewCell() }
             
+//            let genre = moviesGenresScrrenCollection[idGenres]
+            
             let modeAllMovie = allMoviesScrrenCollection[indexPath.row]
             cellAllMovies.updateAllMovies(model: modeAllMovie)
             
@@ -41,16 +45,20 @@ extension MoviesViewController: UICollectionViewDataSource {
 extension MoviesViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let main = UIStoryboard(name: "Main", bundle: nil)
-        
-        if let vc = main.instantiateViewController(withIdentifier: "ScreenPresentViewController") as? ScreenPresentViewController {
-            
-            vc.mainimage = allMoviesScrrenCollection[indexPath.row].backdropPath
-            vc.maintitle = allMoviesScrrenCollection[indexPath.row].originalTitle
-            vc.raiting = allMoviesScrrenCollection[indexPath.row].voteAverage
-            vc.releas = allMoviesScrrenCollection[indexPath.row].releaseDate
-            vc.descriptionMovie = allMoviesScrrenCollection[indexPath.row].overview
-            
-            navigationController?.pushViewController(vc, animated: true)
+        if collectionView == allMoviesCollectionView {
+            if let vc = main.instantiateViewController(withIdentifier: "ScreenPresentViewController") as? ScreenPresentViewController {
+                
+                vc.mainimage = allMoviesScrrenCollection[indexPath.row].backdropPath
+                vc.maintitle = allMoviesScrrenCollection[indexPath.row].originalTitle
+                vc.raiting = allMoviesScrrenCollection[indexPath.row].voteAverage
+                vc.releas = allMoviesScrrenCollection[indexPath.row].releaseDate
+                vc.descriptionMovie = allMoviesScrrenCollection[indexPath.row].overview
+                
+                navigationController?.pushViewController(vc, animated: true)
+            }
+        } else {
+            idGenres = indexPath.row
+            allMoviesCollectionView.reloadData()
         }
     }
 }
@@ -61,7 +69,7 @@ extension MoviesViewController: UICollectionViewDelegateFlowLayout {
         if collectionView == genresCollectionView {
             return CGSize(width: 70, height: 25)
         } else {
-            return CGSize(width: 320, height: 200)
+            return CGSize(width: 350, height: 300)
         }
     }
 }

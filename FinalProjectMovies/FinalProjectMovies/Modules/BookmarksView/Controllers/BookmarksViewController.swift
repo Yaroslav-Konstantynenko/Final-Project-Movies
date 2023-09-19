@@ -15,7 +15,7 @@ class BookmarksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.customColorGradientGreen()
+        view.customColorGradientMainView()
         registerBookmarksCell()
         
     }

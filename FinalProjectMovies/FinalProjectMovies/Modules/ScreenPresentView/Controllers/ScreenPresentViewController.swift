@@ -17,6 +17,10 @@ class ScreenPresentViewController: UIViewController {
     @IBOutlet private weak var dataReleaseLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     
+    @IBOutlet weak var mainSaveView: UIView!
+    @IBOutlet weak var saveInsideView: UIView!
+    
+    
     @IBOutlet private weak var titleView: UIView!
     @IBOutlet private weak var raitingView: UIView!
     @IBOutlet private weak var dadaReleaseView: UIView!
@@ -29,12 +33,13 @@ class ScreenPresentViewController: UIViewController {
     var raiting: Double = 0.0
     var releas: String = ""
     var descriptionMovie: String = ""
+    // Video player
     var idMovies: Int = 0
     var kayMovies: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.customColorGradientGreen()
+        view.customColorGradientMainView()
         
         configurePresentView()
         getDataScreenViewController()
@@ -48,6 +53,10 @@ class ScreenPresentViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func saveMovieButtonAction(_ sender: Any) {
+    }
+    
     
     @IBAction func playVideoButtonAction(_ sender: Any) {
         videoPlayerView.load(withVideoId: kayMovies)
@@ -71,13 +80,16 @@ class ScreenPresentViewController: UIViewController {
         titleLabel.layer.cornerRadius = 5
         titleView.layer.cornerRadius = 5
         
+        mainSaveView.layer.cornerRadius = 5
+        saveInsideView.layer.cornerRadius = 5
+        
         raitingView.layer.cornerRadius = 5
         ratingLabel.layer.cornerRadius = 5
         
         dadaReleaseView.layer.cornerRadius = 5
         dataReleaseLabel.layer.cornerRadius = 5
         
-        descriptionView.layer.cornerRadius = 5
-        descriptionLabel.layer.cornerRadius = 5
+        descriptionView.layer.cornerRadius = 7
+        descriptionLabel.layer.cornerRadius = 7
     }
 }

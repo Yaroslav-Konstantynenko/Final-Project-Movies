@@ -10,10 +10,13 @@ import Kingfisher
 
 class AllMoviesCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet private weak var mainImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var seveMovieButton: UIButton!
-    @IBOutlet private weak var reitingView: UIView!
+    @IBOutlet weak var raitingView: UIView!
+    
+    @IBOutlet weak var titleView: UIView!
+
     @IBOutlet private weak var reitingLabel: UILabel!
     
     
@@ -42,8 +45,10 @@ class AllMoviesCollectionViewCell: UICollectionViewCell {
     }
     
     private func configurAllMovies() {
+        mainView.layer.cornerRadius = 10
         mainImageView.layer.cornerRadius = 10
-        reitingView.layer.cornerRadius = 60
-        seveMovieButton.layer.cornerRadius = 8
+        reitingLabel.layer.cornerRadius = 10
+        titleView.layer.cornerRadius = 10
+        raitingView.layer.cornerRadius = 10
     }
 }

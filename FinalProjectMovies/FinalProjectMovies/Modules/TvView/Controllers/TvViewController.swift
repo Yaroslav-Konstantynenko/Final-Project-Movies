@@ -15,7 +15,7 @@ class TvViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.customColorGradientGreen()
+        view.customColorGradientMainView()
         tegisterCell()
         
         GetNetworkData.shered.getAllTv { result in
