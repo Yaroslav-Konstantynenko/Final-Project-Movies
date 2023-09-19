@@ -144,4 +144,30 @@ class GetNetworkData {
             }
         }
     }
+    
+    //MARK: Get load Movie Video
+    func getLoadVideo(movieId: Int, completion: @escaping (Result<[Video], Error>) -> Void) {
+        let urlVideo = Constant.network.baseUrlMovie + "movie/\(movieId)/videos" + Constant.network.apiKey
+        
+        AF.request(urlVideo).responseJSON { response in
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                
+                if let data = response.data {
+                    do {
+                        let video = try decoder.decode(MovieVideosKay.self, from: data)
+                        completion(.success(video.videos))
+                        print("Працює Video Kay!")
+                        return
+                    } catch {
+                        completion(.failure(error))
+                    }
+                }
+                
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }

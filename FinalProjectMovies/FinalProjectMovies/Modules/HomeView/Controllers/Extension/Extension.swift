@@ -54,6 +54,7 @@ extension HomeViewController: UICollectionViewDelegate {
                 vc.releas = homeScreenMoviesCollection[indexPath.row].releaseDate
                 vc.descriptionMovie = homeScreenMoviesCollection[indexPath.row].overview
                 
+                
                 navigationController?.pushViewController(vc, animated: true)
                 
             } else {

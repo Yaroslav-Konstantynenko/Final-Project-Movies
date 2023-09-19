@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     var homeScreenMoviesCollection: [TopMovies] = []
     var homeScreenTvCollection: [TopTv] = []
     
-    var saveMovies: [ModelRealmMovies] = []
+    var saveMovies: [Any] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

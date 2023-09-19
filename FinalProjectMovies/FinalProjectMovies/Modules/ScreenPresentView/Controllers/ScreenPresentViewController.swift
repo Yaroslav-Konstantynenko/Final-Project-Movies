@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import YouTubeiOSPlayerHelper
 
 class ScreenPresentViewController: UIViewController {
     
@@ -21,11 +22,15 @@ class ScreenPresentViewController: UIViewController {
     @IBOutlet private weak var dadaReleaseView: UIView!
     @IBOutlet private weak var descriptionView: UIView!
     
+    @IBOutlet weak var videoPlayerView: YTPlayerView!
+    
     var mainimage: String = ""
     var maintitle: String = ""
     var raiting: Double = 0.0
     var releas: String = ""
     var descriptionMovie: String = ""
+    var idMovies: Int = 0
+    var kayMovies: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +38,21 @@ class ScreenPresentViewController: UIViewController {
         
         configurePresentView()
         getDataScreenViewController()
+        
+        GetNetworkData.shered.getLoadVideo(movieId: idMovies) { result in
+            switch result {
+            case .success(let kay):
+                self.kayMovies = kay.first?.key ?? "Не має відео ключа"
+            case .failure(let error):
+                print("Помилка, данні не додалися в kayMovies: \(error)")
+            }
+        }
     }
+    
+    @IBAction func playVideoButtonAction(_ sender: Any) {
+        videoPlayerView.load(withVideoId: kayMovies)
+    }
+    
     
     private func getDataScreenViewController() {
         let urlString = Constant.network.defaultImagePath + mainimage

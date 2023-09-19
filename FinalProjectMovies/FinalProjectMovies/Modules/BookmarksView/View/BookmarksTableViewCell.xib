@@ -17,19 +17,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RrB-e4-Zgo">
-                        <rect key="frame" x="0.0" y="0.0" width="350" height="70"/>
+                        <rect key="frame" x="0.0" y="0.0" width="345" height="65"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pngimg.com - madagascar_penguins_PNG10" translatesAutoresizingMaskIntoConstraints="NO" id="Ugy-GK-JMY">
-                                <rect key="frame" x="5" y="5" width="70" height="63"/>
+                                <rect key="frame" x="5" y="5" width="70" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="cGQ-zm-3mz"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yXJ-JJ-9LQ">
-                                <rect key="frame" x="80" y="5" width="265" height="60"/>
+                                <rect key="frame" x="80" y="5" width="260" height="55"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0k-9T-kfU">
-                                        <rect key="frame" x="5" y="8" width="255" height="44"/>
+                                        <rect key="frame" x="5" y="8" width="250" height="39"/>
                                         <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -59,13 +59,14 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="RrB-e4-Zgo" secondAttribute="trailing" id="1PY-4D-1RN"/>
+                    <constraint firstAttribute="trailing" secondItem="RrB-e4-Zgo" secondAttribute="trailing" constant="5" id="1PY-4D-1RN"/>
                     <constraint firstItem="RrB-e4-Zgo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="JMo-mL-Pxp"/>
                     <constraint firstItem="RrB-e4-Zgo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="KTf-uR-ef8"/>
-                    <constraint firstAttribute="bottom" secondItem="RrB-e4-Zgo" secondAttribute="bottom" id="zLG-oB-XSq"/>
+                    <constraint firstAttribute="bottom" secondItem="RrB-e4-Zgo" secondAttribute="bottom" constant="5" id="zLG-oB-XSq"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="backgroundLabelView" destination="yXJ-JJ-9LQ" id="eby-Yh-hkN"/>
                 <outlet property="mainImageView" destination="Ugy-GK-JMY" id="kTP-ZP-xWD"/>
