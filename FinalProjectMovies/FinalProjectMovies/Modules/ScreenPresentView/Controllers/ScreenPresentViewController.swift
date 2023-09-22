@@ -8,6 +8,7 @@
 import UIKit
 import Kingfisher
 import YouTubeiOSPlayerHelper
+import Alamofire
 
 class ScreenPresentViewController: UIViewController {
     
@@ -33,35 +34,48 @@ class ScreenPresentViewController: UIViewController {
     var raiting: Double = 0.0
     var releas: String = ""
     var descriptionMovie: String = ""
+    
+    var media: String = ""
     // Video player
     var idMovies: Int = 0
-    var kayMovies: String = ""
+    var keyVideo: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.customColorGradientMainView()
-        
         configurePresentView()
         getDataScreenViewController()
-        
-        GetNetworkData.shered.getLoadVideo(movieId: idMovies) { result in
-            switch result {
-            case .success(let kay):
-                self.kayMovies = kay.first?.key ?? "Не має відео ключа"
-            case .failure(let error):
-                print("Помилка, данні не додалися в kayMovies: \(error)")
-            }
-        }
+        getVideoLoad()
     }
     
     @IBAction func saveMovieButtonAction(_ sender: Any) {
+        RealmManegerBookmarks.shered.savePost(maintitle)
+        BookmarksViewController().bookmarksSaveList = RealmManegerBookmarks.shered.getPost()
+        
+        let alert = UIAlertController(title: "Save Movie 🍿",
+                                      message: nil,
+                                      preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(title: "Ok",
+                                      style: UIAlertAction.Style.default,
+                                      handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
-    
     
     @IBAction func playVideoButtonAction(_ sender: Any) {
-        videoPlayerView.load(withVideoId: kayMovies)
+        videoPlayerView.load(withVideoId: keyVideo)
     }
     
+    private func getVideoLoad() {
+        GetNetworkData.shered.getLoadVideoMovie(movieId: idMovies, type: media) { result in
+            switch result {
+            case .success(let key):
+                self.keyVideo = key.first?.key ?? "No Key !!!"
+            case .failure(let error):
+                print("Помилка данні для відео не прийшли: \(error)")
+            }
+        }
+    }
     
     private func getDataScreenViewController() {
         let urlString = Constant.network.defaultImagePath + mainimage

@@ -13,9 +13,11 @@ extension MoviesViewController: UICollectionViewDataSource {
         if collectionView == genresCollectionView {
             return moviesGenresScrrenCollection.count
         } else {
-            return allMoviesScrrenCollection.count
-//            let genre = moviesGenresScrrenCollection[idGenres]
-//            return genre.name.count
+            if idGenres != 0 {
+                return moviesGanresId.count
+            } else {
+                return allMoviesScrrenCollection.count
+            }
         }
     }
     
@@ -32,11 +34,13 @@ extension MoviesViewController: UICollectionViewDataSource {
         } else {
             guard let cellAllMovies = collectionView.dequeueReusableCell(withReuseIdentifier: "AllMoviesCollectionViewCell", for: indexPath) as? AllMoviesCollectionViewCell else { return UICollectionViewCell() }
             
-//            let genre = moviesGenresScrrenCollection[idGenres]
-            
-            let modeAllMovie = allMoviesScrrenCollection[indexPath.row]
-            cellAllMovies.updateAllMovies(model: modeAllMovie)
-            
+            if idGenres != 0 {
+                let modeAllMovie = moviesGanresId[indexPath.row]
+                cellAllMovies.updateAllMovies(model: modeAllMovie)
+            } else {
+                let modeAllMovie = allMoviesScrrenCollection[indexPath.row]
+                cellAllMovies.updateAllMovies(model: modeAllMovie)
+            }
             return cellAllMovies
         }
     }
@@ -48,16 +52,39 @@ extension MoviesViewController: UICollectionViewDelegate {
         if collectionView == allMoviesCollectionView {
             if let vc = main.instantiateViewController(withIdentifier: "ScreenPresentViewController") as? ScreenPresentViewController {
                 
-                vc.mainimage = allMoviesScrrenCollection[indexPath.row].backdropPath
-                vc.maintitle = allMoviesScrrenCollection[indexPath.row].originalTitle
-                vc.raiting = allMoviesScrrenCollection[indexPath.row].voteAverage
-                vc.releas = allMoviesScrrenCollection[indexPath.row].releaseDate
-                vc.descriptionMovie = allMoviesScrrenCollection[indexPath.row].overview
-                
-                navigationController?.pushViewController(vc, animated: true)
+                if idGenres != 0 {
+                    vc.mainimage = moviesGanresId[indexPath.row].backdropPath
+                    vc.maintitle = moviesGanresId[indexPath.row].originalTitle
+                    vc.raiting = moviesGanresId[indexPath.row].voteAverage
+                    vc.releas = moviesGanresId[indexPath.row].releaseDate
+                    vc.descriptionMovie = moviesGanresId[indexPath.row].overview
+                    vc.idMovies = moviesGanresId[indexPath.row].id
+                    vc.media = moviesGanresId[indexPath.row].mediaType
+                    
+                    navigationController?.pushViewController(vc, animated: true)
+                } else {
+                    vc.mainimage = allMoviesScrrenCollection[indexPath.row].backdropPath
+                    vc.maintitle = allMoviesScrrenCollection[indexPath.row].originalTitle
+                    vc.raiting = allMoviesScrrenCollection[indexPath.row].voteAverage
+                    vc.releas = allMoviesScrrenCollection[indexPath.row].releaseDate
+                    vc.descriptionMovie = allMoviesScrrenCollection[indexPath.row].overview
+                    vc.idMovies = allMoviesScrrenCollection[indexPath.row].id
+                    vc.media = allMoviesScrrenCollection[indexPath.row].mediaType
+                    
+                    navigationController?.pushViewController(vc, animated: true)
+                }
             }
         } else {
-            idGenres = indexPath.row
+            idGenres = moviesGenresScrrenCollection[indexPath.row].id
+            
+            var newArray: [AllMovies] = []
+            
+            for ganre in allMoviesScrrenCollection {
+                if ganre.genreIDS.contains(idGenres) {
+                    newArray.append(ganre)
+                }
+            }
+            self.moviesGanresId = newArray
             allMoviesCollectionView.reloadData()
         }
     }

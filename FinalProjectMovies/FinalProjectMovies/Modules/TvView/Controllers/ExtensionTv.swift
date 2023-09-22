@@ -36,6 +36,9 @@ extension TvViewController: UICollectionViewDelegate {
             vc.releas = allTvScreenCollection[indexPath.row].firstAirDate
             vc.descriptionMovie = allTvScreenCollection[indexPath.row].overview
             
+            vc.idMovies = allTvScreenCollection[indexPath.row].id
+            vc.media = allTvScreenCollection[indexPath.row].mediaType
+            
             navigationController?.pushViewController(vc, animated: true)
         }
     }

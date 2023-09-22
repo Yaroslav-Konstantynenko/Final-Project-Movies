@@ -25,7 +25,7 @@ class TopVideoCollectionViewCell: UICollectionViewCell {
         configurCell()
     }
     
-    func updateDataMovie(model: TopMovies) {
+    func updateDataMovieDay(model: TopMovies) {
         let posterPath = model.backdropPath
         let urlString = Constant.network.defaultImagePath + posterPath
         mainImageView.kf.setImage(with: URL(string: urlString))
@@ -38,7 +38,7 @@ class TopVideoCollectionViewCell: UICollectionViewCell {
         dataMovieLabel.text = model.releaseDate
     }
     
-    func updateDataTv(model: TopTv) {
+    func updateDataTvDay(model: TopTv) {
         let posterPath = model.backdropPath
         let urlString = Constant.network.defaultImagePath + posterPath
         mainImageView.kf.setImage(with: URL(string: urlString))

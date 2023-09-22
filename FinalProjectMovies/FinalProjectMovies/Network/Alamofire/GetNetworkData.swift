@@ -146,17 +146,17 @@ class GetNetworkData {
     }
     
     //MARK: Get load Movie Video
-    func getLoadVideo(movieId: Int, completion: @escaping (Result<[Video], Error>) -> Void) {
-        let urlVideo = Constant.network.baseUrlMovie + "movie/\(movieId)/videos" + Constant.network.apiKey
+    func getLoadVideoMovie(movieId: Int, type: String, completion: @escaping (Result<[MovieVideo], Error>) -> Void) {
+        let url = "https://api.themoviedb.org/3/\(type)/\(movieId)/videos\(Constant.network.apiKey)"
         
-        AF.request(urlVideo).responseJSON { response in
+        AF.request(url).responseJSON { response in
             switch response.result {
             case .success(_):
                 let decoder = JSONDecoder()
                 
                 if let data = response.data {
                     do {
-                        let video = try decoder.decode(MovieVideosKay.self, from: data)
+                        let video = try decoder.decode(ModelVideoMovie.self, from: data)
                         completion(.success(video.videos))
                         print("Працює Video Kay!")
                         return
@@ -168,6 +168,7 @@ class GetNetworkData {
             case .failure(let error):
                 completion(.failure(error))
             }
+            
         }
     }
 }

@@ -21,14 +21,14 @@
                         <rect key="frame" x="5" y="8" width="403" height="272"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="joker" translatesAutoresizingMaskIntoConstraints="NO" id="3T5-pT-KWM">
-                                <rect key="frame" x="2" y="4" width="397" height="266"/>
+                                <rect key="frame" x="5" y="5" width="395" height="264"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVN-5m-9wP">
                                 <rect key="frame" x="0.0" y="235" width="399" height="35"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARm-ZY-Veo">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARm-ZY-Veo">
                                         <rect key="frame" x="4" y="5" width="387" height="25"/>
-                                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="19"/>
+                                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="20"/>
                                         <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -66,14 +66,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.34254226879999999" green="0.20147782180000001" blue="0.5" alpha="0.6970605913376966" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3T5-pT-KWM" firstAttribute="leading" secondItem="d5f-rG-0IX" secondAttribute="leading" constant="2" id="4ju-Cu-EaC"/>
-                            <constraint firstAttribute="trailing" secondItem="3T5-pT-KWM" secondAttribute="trailing" constant="4" id="MZz-7t-IRc"/>
+                            <constraint firstItem="3T5-pT-KWM" firstAttribute="leading" secondItem="d5f-rG-0IX" secondAttribute="leading" constant="5" id="4ju-Cu-EaC"/>
+                            <constraint firstAttribute="trailing" secondItem="3T5-pT-KWM" secondAttribute="trailing" constant="3" id="MZz-7t-IRc"/>
                             <constraint firstAttribute="trailing" secondItem="TVN-5m-9wP" secondAttribute="trailing" constant="4" id="QPw-XF-go1"/>
                             <constraint firstItem="TVN-5m-9wP" firstAttribute="leading" secondItem="d5f-rG-0IX" secondAttribute="leading" id="W2B-zE-3bs"/>
-                            <constraint firstAttribute="bottom" secondItem="3T5-pT-KWM" secondAttribute="bottom" constant="2" id="c2o-QI-B1b"/>
+                            <constraint firstAttribute="bottom" secondItem="3T5-pT-KWM" secondAttribute="bottom" constant="3" id="c2o-QI-B1b"/>
                             <constraint firstItem="amq-Pd-o9Z" firstAttribute="top" secondItem="d5f-rG-0IX" secondAttribute="top" constant="-5" id="iYy-Pg-2EK"/>
                             <constraint firstAttribute="trailing" secondItem="amq-Pd-o9Z" secondAttribute="trailing" constant="-5" id="nNS-U7-4II"/>
-                            <constraint firstItem="3T5-pT-KWM" firstAttribute="top" secondItem="d5f-rG-0IX" secondAttribute="top" constant="4" id="ptF-67-hnf"/>
+                            <constraint firstItem="3T5-pT-KWM" firstAttribute="top" secondItem="d5f-rG-0IX" secondAttribute="top" constant="5" id="ptF-67-hnf"/>
                             <constraint firstAttribute="bottom" secondItem="TVN-5m-9wP" secondAttribute="bottom" constant="2" id="yj6-ov-3Fc"/>
                         </constraints>
                     </view>

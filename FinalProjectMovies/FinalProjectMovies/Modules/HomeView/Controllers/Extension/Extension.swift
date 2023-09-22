@@ -22,12 +22,12 @@ extension HomeViewController: UICollectionViewDataSource {
         
         if collectionView == moviesCollectionView {
             let modelMovies = homeScreenMoviesCollection[indexPath.row]
-            cell.updateDataMovie(model: modelMovies)
+            cell.updateDataMovieDay(model: modelMovies)
             
             return cell
         } else {
             let modelTv = homeScreenTvCollection[indexPath.row]
-            cell.updateDataTv(model: modelTv)
+            cell.updateDataTvDay(model: modelTv)
             
             return cell
         }
@@ -53,7 +53,8 @@ extension HomeViewController: UICollectionViewDelegate {
                 vc.raiting = homeScreenMoviesCollection[indexPath.row].voteAverage
                 vc.releas = homeScreenMoviesCollection[indexPath.row].releaseDate
                 vc.descriptionMovie = homeScreenMoviesCollection[indexPath.row].overview
-                
+                vc.idMovies = homeScreenMoviesCollection[indexPath.row].id
+                vc.media = homeScreenMoviesCollection[indexPath.row].mediaType
                 
                 navigationController?.pushViewController(vc, animated: true)
                 
@@ -63,6 +64,8 @@ extension HomeViewController: UICollectionViewDelegate {
                 vc.raiting = homeScreenTvCollection[indexPath.row].voteAverage
                 vc.releas = homeScreenTvCollection[indexPath.row].firstAirDate
                 vc.descriptionMovie = homeScreenTvCollection[indexPath.row].overview
+                vc.idMovies = homeScreenTvCollection[indexPath.row].id
+                vc.media = homeScreenTvCollection[indexPath.row].mediaType
                 
                 navigationController?.pushViewController(vc, animated: true)
             }

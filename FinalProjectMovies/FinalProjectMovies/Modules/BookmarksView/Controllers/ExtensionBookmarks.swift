@@ -15,9 +15,8 @@ extension BookmarksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "BookmarksTableViewCell", for: indexPath) as? BookmarksTableViewCell else { return UITableViewCell() }
         
-        //let list = BookmarksViewController.bookmarksSaveList[indexPath.row]
-        //cell.textLabel?.text = BookmarksViewController.bookmarksSaveList[indexPath.row]
-        
+        let list = bookmarksSaveList[indexPath.row]
+        cell.titleLabel.text = list.title
         return cell
     }
 }
@@ -34,14 +33,17 @@ extension BookmarksViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            
             // Remove product from Realm
-            let product = bookmarksSaveList[indexPath.row]
-            //ShoppingListDataManager().deleteProduct(product: product)
+            let title = bookmarksSaveList[indexPath.row]
+            RealmManegerBookmarks.shered.deletePost(title: title)
+            
             //Remove product from TableView
             bookmarksSaveList.remove(at: indexPath.row)
             bookmarksTableView.deleteRows(at: [indexPath], with: .left)
         }
     }
+    
     // Move
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true

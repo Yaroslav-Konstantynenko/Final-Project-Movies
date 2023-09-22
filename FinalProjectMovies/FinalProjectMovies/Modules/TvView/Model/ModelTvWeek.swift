@@ -29,7 +29,7 @@ struct TvWeek: Codable {
     let id: Int
     let name, originalLanguage, originalName, overview: String
     let posterPath: String
-    let mediaType: MediaType
+    let mediaType: String
     let genreIDS: [Int]
     let popularity: Double
     let firstAirDate: String
@@ -53,9 +53,5 @@ struct TvWeek: Codable {
         case voteCount = "vote_count"
         case originCountry = "origin_country"
     }
-}
-
-enum MediaType: String, Codable {
-    case tv = "tv"
 }
 

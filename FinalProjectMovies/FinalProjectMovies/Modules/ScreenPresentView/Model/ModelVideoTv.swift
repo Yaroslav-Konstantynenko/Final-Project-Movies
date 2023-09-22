@@ -1,16 +1,16 @@
 //
-//  ModelVideo.swift
+//  ModelTv.swift
 //  FinalProjectMovies
 //
-//  Created by Yaroslav Konstantynenko on 19.09.2023.
+//  Created by Yaroslav Konstantynenko on 20.09.2023.
 //
 
 import Foundation
 
-struct MovieVideosKay : Codable {
+struct ModelVideoTv: Codable {
     
     let id: Int
-    let videos: [Video]
+    let videos: [tvVideo]
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -18,7 +18,7 @@ struct MovieVideosKay : Codable {
     }
 }
 
-struct Video: Codable {
+struct tvVideo: Codable {
     
     let iso_639_1 : String
     let iso_3166_1 : String

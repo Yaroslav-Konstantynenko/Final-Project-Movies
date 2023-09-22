@@ -16,7 +16,9 @@ class MoviesViewController: UIViewController {
     var moviesGenresScrrenCollection: [Genres] = []
     var allMoviesScrrenCollection: [AllMovies] = []
     
-    var idGenres = 44
+    var moviesGanresId: [AllMovies] = []
+    
+    var idGenres = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()

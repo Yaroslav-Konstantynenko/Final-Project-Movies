@@ -12,16 +12,11 @@ class BookmarksTableViewCell: UITableViewCell {
     @IBOutlet private weak var mainView: UIView!
     @IBOutlet private weak var mainImageView: UIImageView!
     @IBOutlet private weak var backgroundLabelView: UIView!
-    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-//        updateListBookmarks()
-    }
-    
-    private func updateListBookmarks() {
-        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

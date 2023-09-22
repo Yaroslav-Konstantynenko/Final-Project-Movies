@@ -10,14 +10,27 @@ import UIKit
 class BookmarksViewController: UIViewController {
     
     @IBOutlet weak var bookmarksTableView: UITableView!
-    var bookmarksSaveList: [String] = ["Hi", "Hi", "Hi", "Hi", "Hi", "Hi",]
+    var bookmarksSaveList: [ModelRealmBookMarks] = []
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updatePost()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.customColorGradientMainView()
         registerBookmarksCell()
         
+        //updatePost()
+        
+
+    }
+    
+    private func updatePost() {
+        bookmarksSaveList = RealmManegerBookmarks.shered.getPost()
+        bookmarksTableView.reloadData()
     }
     
     func registerBookmarksCell() {
