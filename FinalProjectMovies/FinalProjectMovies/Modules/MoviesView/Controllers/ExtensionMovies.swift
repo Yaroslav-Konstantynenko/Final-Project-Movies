@@ -56,7 +56,7 @@ extension MoviesViewController: UICollectionViewDelegate {
                 
                 if idGenres != 0 {
                     vc.mainimage = moviesGanresId[indexPath.row].backdropPath
-                    vc.maintitle = moviesGanresId[indexPath.row].originalTitle
+                    vc.maintitle = moviesGanresId[indexPath.row].title
                     vc.raiting = moviesGanresId[indexPath.row].voteAverage
                     vc.releas = moviesGanresId[indexPath.row].releaseDate
                     vc.descriptionMovie = moviesGanresId[indexPath.row].overview
@@ -67,7 +67,7 @@ extension MoviesViewController: UICollectionViewDelegate {
                     
                 } else {
                     vc.mainimage = allMoviesScrrenCollection[indexPath.row].backdropPath
-                    vc.maintitle = allMoviesScrrenCollection[indexPath.row].originalTitle
+                    vc.maintitle = allMoviesScrrenCollection[indexPath.row].title
                     vc.raiting = allMoviesScrrenCollection[indexPath.row].voteAverage
                     vc.releas = allMoviesScrrenCollection[indexPath.row].releaseDate
                     vc.descriptionMovie = allMoviesScrrenCollection[indexPath.row].overview

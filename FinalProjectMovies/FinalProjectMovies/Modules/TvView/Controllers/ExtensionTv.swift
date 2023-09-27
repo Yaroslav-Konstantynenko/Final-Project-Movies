@@ -31,7 +31,7 @@ extension TvViewController: UICollectionViewDelegate {
         if let vc = main.instantiateViewController(withIdentifier: "ScreenPresentViewController") as? ScreenPresentViewController {
             
             vc.mainimage = allTvScreenCollection[indexPath.row].backdropPath
-            vc.maintitle = allTvScreenCollection[indexPath.row].originalName
+            vc.maintitle = allTvScreenCollection[indexPath.row].name
             vc.raiting = allTvScreenCollection[indexPath.row].voteAverage
             vc.releas = allTvScreenCollection[indexPath.row].firstAirDate
             vc.descriptionMovie = allTvScreenCollection[indexPath.row].overview

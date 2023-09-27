@@ -24,7 +24,7 @@ class AllTvCollectionViewCell: UICollectionViewCell {
     }
     
     func updateAllTvCell(model: TvWeek) {
-        titleLabel.text = model.originalName
+        titleLabel.text = model.name
         
         let posterPath = model.backdropPath
         let urlString = Constant.network.defaultImagePath + posterPath

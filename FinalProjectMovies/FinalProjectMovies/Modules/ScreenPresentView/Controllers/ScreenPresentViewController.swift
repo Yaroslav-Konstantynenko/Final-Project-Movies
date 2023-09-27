@@ -50,7 +50,7 @@ class ScreenPresentViewController: UIViewController {
     @IBAction func saveMovieButtonAction(_ sender: Any) {
         RealmManegerBookmarks.shered.savePost(maintitle)
         
-        let alert = UIAlertController(title: "Save Movie 🍿",
+        let alert = UIAlertController(title: "Фільм успішно збережено 🍿",
                                       message: nil,
                                       preferredStyle: UIAlertController.Style.alert)
         

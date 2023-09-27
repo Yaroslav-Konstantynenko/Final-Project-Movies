@@ -10,7 +10,9 @@ import UIKit
 struct Constant {
     
     struct network {
-        static let apiKey = "?api_key=331e07208d153f576f7451e4777990f2"
+        static let apiKey = ["api_key" : "331e07208d153f576f7451e4777990f2"]
+        
+        static let language = "?language=uk-UA"
         
         static let baseUrlMovie = "https://api.themoviedb.org/3/"
         

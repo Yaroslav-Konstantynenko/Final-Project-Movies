@@ -20,6 +20,7 @@ class RealmManegerBookmarks {
     // Save post in Realm
     func savePost(_ saveTitle: String) {
         let title = ModelRealmBookMarks()
+        
         title.title = saveTitle
         
         try? realm?.write {

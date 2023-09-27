@@ -25,7 +25,7 @@ class AllMoviesCollectionViewCell: UICollectionViewCell {
     }
     
     func updateAllMovies(model: AllMovies) {
-        titleLabel.text = model.originalTitle
+        titleLabel.text = model.title
         
         let posterPath = model.backdropPath
         let urlString = Constant.network.defaultImagePath + posterPath

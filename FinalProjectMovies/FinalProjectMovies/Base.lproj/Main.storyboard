@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movies-->
+        <!--Фільми-->
         <scene sceneID="GsV-aS-TMm">
             <objects>
                 <viewController storyboardIdentifier="MoviesViewController" id="6r7-rS-tqe" customClass="MoviesViewController" customModule="FinalProjectMovies" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITi-Gt-uKa">
-                                <rect key="frame" x="170.5" y="92" width="73" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фільми" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITi-Gt-uKa">
+                                <rect key="frame" x="170" y="92" width="74" height="26.5"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                 <color key="textColor" red="0.55576085559999999" green="0.1447588739" blue="0.24469344909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -88,7 +88,7 @@
                             <constraint firstItem="6DT-Lh-SDG" firstAttribute="bottom" secondItem="InM-US-hKq" secondAttribute="bottom" constant="10" id="zTo-LC-BLO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Movies" image="film" catalog="system" id="3YV-Tn-M17"/>
+                    <tabBarItem key="tabBarItem" title="Фільми" image="film" catalog="system" id="3YV-Tn-M17"/>
                     <connections>
                         <outlet property="allMoviesCollectionView" destination="HTr-dq-btg" id="YYa-Jg-4hQ"/>
                         <outlet property="genresCollectionView" destination="wyr-CP-3A4" id="I3W-nu-5ju"/>
@@ -99,7 +99,7 @@
             </objects>
             <point key="canvasLocation" x="-431.8840579710145" y="710.49107142857144"/>
         </scene>
-        <!--Home-->
+        <!--Головна-->
         <scene sceneID="mN3-5T-PYD">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="i4O-Ev-jLb" customClass="HomeViewController" customModule="FinalProjectMovies" customModuleProvider="target" sceneMemberID="viewController">
@@ -107,8 +107,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's trending now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhg-Ex-q2k">
-                                <rect key="frame" x="120" y="127" width="174" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сьогодні у тренді" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhg-Ex-q2k">
+                                <rect key="frame" x="134" y="127" width="146" height="22"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                 <color key="textColor" red="0.42514354924004999" green="0.2503391771798778" blue="0.62329332756273681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -119,8 +119,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1be-yT-Aut">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="760"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd7-mo-X8Z">
-                                                <rect key="frame" x="8" y="16" width="61" height="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фільми" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd7-mo-X8Z">
+                                                <rect key="frame" x="8" y="16" width="62" height="22"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                                 <color key="textColor" red="0.57240734680000005" green="0.14909478079999999" blue="0.25202265779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -143,8 +143,8 @@
                                                     <outlet property="delegate" destination="i4O-Ev-jLb" id="y1J-gt-su6"/>
                                                 </connections>
                                             </collectionView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYJ-hT-IuX">
-                                                <rect key="frame" x="8" y="294" width="21.5" height="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ТВ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYJ-hT-IuX">
+                                                <rect key="frame" x="8" y="294" width="22" height="22"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                                 <color key="textColor" red="0.57240734680000005" green="0.14909478079999999" blue="0.25202265779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -211,14 +211,14 @@
                                     <constraint firstItem="1be-yT-Aut" firstAttribute="leading" secondItem="tK1-aI-C1S" secondAttribute="leading" id="d50-it-Nvp"/>
                                 </constraints>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMB-iL-quc">
-                                <rect key="frame" x="164" y="92" width="86" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Вітаємо 🇺🇦" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMB-iL-quc">
+                                <rect key="frame" x="149.5" y="92" width="115" height="27"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                 <color key="textColor" red="0.56289503307573385" green="0.14661711108850689" blue="0.24783452399119962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="captain_america" translatesAutoresizingMaskIntoConstraints="NO" id="pJp-wT-drX">
-                                <rect key="frame" x="274" y="3" width="200" height="230"/>
+                                <rect key="frame" x="260" y="3" width="200" height="230"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="230" id="Ogs-Jq-FC8"/>
                                     <constraint firstAttribute="width" constant="200" id="WVt-IN-7Qc"/>
@@ -241,7 +241,7 @@
                             <constraint firstItem="UMB-iL-quc" firstAttribute="top" secondItem="Wr7-3U-PK8" secondAttribute="top" id="yTI-ev-a1s"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="nRw-Uv-n1z"/>
+                    <tabBarItem key="tabBarItem" title="Головна" image="house" catalog="system" id="nRw-Uv-n1z"/>
                     <connections>
                         <outlet property="moviesCollectionView" destination="ddZ-S3-UF3" id="jec-bF-LSp"/>
                         <outlet property="tvColllectionView" destination="T7U-7A-ZBU" id="oU9-R8-nOg"/>
@@ -292,7 +292,7 @@
             </objects>
             <point key="canvasLocation" x="-69" y="-63"/>
         </scene>
-        <!--Bookmarks-->
+        <!--Нотатки-->
         <scene sceneID="ms0-Ii-iba">
             <objects>
                 <viewController storyboardIdentifier="BookmarksViewController" id="NsR-FE-DUA" customClass="BookmarksViewController" customModule="FinalProjectMovies" customModuleProvider="target" sceneMemberID="viewController">
@@ -315,8 +315,8 @@
                                     <constraint firstAttribute="height" constant="160" id="imD-c6-BKf"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bookmarks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peT-jl-iFl">
-                                <rect key="frame" x="152.5" y="92" width="109" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваші улюблені фільми" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peT-jl-iFl">
+                                <rect key="frame" x="98.5" y="92" width="217.5" height="27"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                 <color key="textColor" red="0.5628950331" green="0.1466171111" blue="0.247834524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -335,7 +335,7 @@
                             <constraint firstItem="K2F-Er-ebu" firstAttribute="bottom" secondItem="j3p-7p-OHK" secondAttribute="bottom" constant="2" id="oip-Fa-h8P"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Bookmarks" image="bookmark.fill" catalog="system" id="dYh-rV-bKR"/>
+                    <tabBarItem key="tabBarItem" title="Нотатки" image="bookmark.fill" catalog="system" id="dYh-rV-bKR"/>
                     <connections>
                         <outlet property="bookmarksTableView" destination="N4G-B6-VC8" id="hDF-cG-NKL"/>
                     </connections>
@@ -344,7 +344,7 @@
             </objects>
             <point key="canvasLocation" x="1000.763358778626" y="710.56338028169023"/>
         </scene>
-        <!--TV-->
+        <!--ТВ-->
         <scene sceneID="n7m-cg-7dK">
             <objects>
                 <viewController storyboardIdentifier="TvViewController" id="qSJ-ON-46B" customClass="TvViewController" customModule="FinalProjectMovies" customModuleProvider="target" sceneMemberID="viewController">
@@ -352,14 +352,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4G-5Y-2fg">
-                                <rect key="frame" x="194" y="92" width="26" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ТВ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4G-5Y-2fg">
+                                <rect key="frame" x="194" y="92" width="26.5" height="27"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                 <color key="textColor" red="0.5628950331" green="0.1466171111" blue="0.247834524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="93H-9N-WXW">
-                                <rect key="frame" x="8" y="134.5" width="398" height="658.5"/>
+                                <rect key="frame" x="8" y="135" width="398" height="658"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tTL-AI-JyU">
                                     <size key="itemSize" width="128" height="128"/>
@@ -374,7 +374,7 @@
                                 </connections>
                             </collectionView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spider_man_PNG89" translatesAutoresizingMaskIntoConstraints="NO" id="KY5-pI-3qa">
-                                <rect key="frame" x="286" y="22.5" width="133" height="127"/>
+                                <rect key="frame" x="286" y="23" width="133" height="127"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="127" id="3V3-vJ-KAV"/>
                                     <constraint firstAttribute="width" constant="133" id="fYl-vT-DQX"/>
@@ -394,7 +394,7 @@
                             <constraint firstItem="KY5-pI-3qa" firstAttribute="trailing" secondItem="5XE-wM-0bq" secondAttribute="trailing" constant="5" id="zvM-bi-BuH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="TV" image="tv" catalog="system" id="ge1-oh-nhm"/>
+                    <tabBarItem key="tabBarItem" title="ТВ" image="tv" catalog="system" id="ge1-oh-nhm"/>
                     <connections>
                         <outlet property="allTvCollectionView" destination="93H-9N-WXW" id="SRp-SH-uYr"/>
                         <segue destination="Y06-OW-t8q" kind="show" id="ozQ-c1-1It"/>
@@ -493,9 +493,9 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ui-BR-qmb">
                                                         <rect key="frame" x="4" y="2" width="134" height="34"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save Movie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFg-hT-Goe">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Зберегти фільм" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFg-hT-Goe">
                                                                 <rect key="frame" x="4" y="4" width="126" height="26"/>
-                                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
+                                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="16"/>
                                                                 <color key="textColor" red="0.91660139293834442" green="0.55139898153630451" blue="0.061268375784375301" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -508,7 +508,7 @@
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="0.77647834424151485" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.18170145160020709" green="0.36817446621981531" blue="0.30917288994784853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="aFg-hT-Goe" secondAttribute="trailing" constant="4" id="7nO-e9-HHF"/>
                                                             <constraint firstAttribute="bottom" secondItem="cND-fx-bda" secondAttribute="bottom" id="BC4-4D-nuO"/>
@@ -559,10 +559,10 @@
                                                     <constraint firstAttribute="width" constant="69" id="lui-NQ-OaA"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIZ-35-IeH">
-                                                <rect key="frame" x="16" y="601.5" width="108" height="39.5"/>
+                                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIZ-35-IeH">
+                                                <rect key="frame" x="16" y="601.5" width="184.5" height="39.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Play Trailer">
+                                                <buttonConfiguration key="configuration" style="filled" title="Відтворити трейлер">
                                                     <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                                     <color key="baseBackgroundColor" red="0.44649382310000002" green="0.1162407344" blue="0.19333864279999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
@@ -586,14 +586,14 @@
                                                     <constraint firstAttribute="width" secondItem="Mri-EE-D6U" secondAttribute="height" multiplier="16:9" id="y0a-jH-RTj"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overwiew movie:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxe-Mv-Ddi">
-                                                <rect key="frame" x="8" y="359" width="122.5" height="18.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Опис фільму:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxe-Mv-Ddi">
+                                                <rect key="frame" x="8" y="359" width="90.5" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                                 <color key="textColor" red="0.55576085559999999" green="0.1447588739" blue="0.24469344909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spider_man_PNG49" translatesAutoresizingMaskIntoConstraints="NO" id="5M2-fn-DI5">
-                                                <rect key="frame" x="158" y="585.5" width="176" height="85"/>
+                                                <rect key="frame" x="234.5" y="585.5" width="176" height="85"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="176" id="PUK-t4-Id5"/>
                                                     <constraint firstAttribute="height" constant="85" id="h0p-2g-vng"/>
@@ -674,7 +674,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cgI-mo-H17"/>
+        <segue reference="ozQ-c1-1It"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bookmark.fill" catalog="system" width="110" height="128"/>

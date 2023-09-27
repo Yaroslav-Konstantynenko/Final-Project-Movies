@@ -19,7 +19,7 @@ class RealmManegerTv {
     func saveRealmTv(_ value: TopTv) {
         let tv = ModelRealmTv()
         
-        tv.title = value.originalName
+        tv.title = value.name
         tv.mainImage = value.backdropPath
         tv.id = value.id
         tv.rating = value.voteAverage

@@ -30,6 +30,8 @@ class HomeViewController: UIViewController {
         GetNetworkData.shered.getTrendingMoviesDay { result in
             switch result {
             case .success(let movies):
+                RealmManegerMovies.shered.clearAllMovies()
+                
                 for value in movies {
                     RealmManegerMovies.shered.saveRealmMovies(value)
                 }

@@ -16,9 +16,9 @@ class GetNetworkData {
     //MARK: Get Trending Movies Day
     
     func getTrendingMoviesDay(completion: @escaping (Result<[TopMovies], Error>) -> Void) {
-        let urlMovies = Constant.network.baseUrlMovie + "trending/movie/day" + Constant.network.apiKey
+        let urlMovies = Constant.network.baseUrlMovie + Constant.network.popularMoviDay + Constant.network.language
         
-        AF.request(urlMovies).responseJSON { response in
+        AF.request(urlMovies, method: .get, parameters: Constant.network.apiKey).responseJSON { response in
             switch response.result {
             case .success(_):
                 let decoder = JSONDecoder()
@@ -42,9 +42,9 @@ class GetNetworkData {
     
     //MARK: Get Trending TV Day
     func getTrendingTvDay(completion: @escaping (Result<[TopTv], Error>) -> Void) {
-        let urlTv = Constant.network.baseUrlMovie + "trending/tv/day" + Constant.network.apiKey
+        let urlTv = Constant.network.baseUrlMovie + Constant.network.popularTvDay + Constant.network.language
         
-        AF.request(urlTv).responseJSON { response in
+        AF.request(urlTv, method: .get, parameters: Constant.network.apiKey).responseJSON { response in
             switch response.result {
             case .success(_):
                 let decoder = JSONDecoder()
@@ -69,9 +69,9 @@ class GetNetworkData {
     //MARK: Get All Movies Day
     
     func getGenresMovies(completion: @escaping (Result<[Genres], Error>) -> Void) {
-        let urlGenres = Constant.network.baseUrlMovie + "genre/movie/list" + Constant.network.apiKey
+        let urlGenres = Constant.network.baseUrlMovie + "genre/movie/list" + Constant.network.language
         
-        AF.request(urlGenres).responseJSON { response in
+        AF.request(urlGenres, method: .get, parameters: Constant.network.apiKey).responseJSON { response in
             switch response.result {
             case .success(_):
                 let decoder = JSONDecoder()
@@ -95,9 +95,9 @@ class GetNetworkData {
     
     //MARK: Get All Movies
     func getAllMovies(completion: @escaping (Result<[AllMovies], Error>) -> Void) {
-        let urlMovies = Constant.network.baseUrlMovie + "trending/movie/week" + Constant.network.apiKey
+        let urlMovies = Constant.network.baseUrlMovie + "trending/movie/week" + Constant.network.language
         
-        AF.request(urlMovies).responseJSON { response in
+        AF.request(urlMovies, method: .get, parameters: Constant.network.apiKey).responseJSON { response in
             switch response.result {
             case .success(_):
                 let decoder = JSONDecoder()
@@ -121,9 +121,9 @@ class GetNetworkData {
     
     //MARK: Get All TV
     func getAllTv(completion: @escaping (Result<[TvWeek], Error>) -> Void) {
-        let urlTvWeek = Constant.network.baseUrlMovie + "trending/tv/week" + Constant.network.apiKey
+        let urlTvWeek = Constant.network.baseUrlMovie + "trending/tv/week" + Constant.network.language
         
-        AF.request(urlTvWeek).responseJSON { response in
+        AF.request(urlTvWeek, method: .get, parameters: Constant.network.apiKey).responseJSON { response in
             switch response.result {
             case .success(_):
                 let decoder = JSONDecoder()
@@ -147,9 +147,9 @@ class GetNetworkData {
     
     //MARK: Get load Movie Video
     func getLoadVideoMovie(movieId: Int, type: String, completion: @escaping (Result<[MovieVideo], Error>) -> Void) {
-        let url = "https://api.themoviedb.org/3/\(type)/\(movieId)/videos\(Constant.network.apiKey)"
+        let urlVideo = "\(Constant.network.baseUrlMovie)" + "\(type)/\(movieId)/videos" + "\(Constant.network.language)"
         
-        AF.request(url).responseJSON { response in
+        AF.request(urlVideo, method: .get, parameters: Constant.network.apiKey).responseJSON { response in
             switch response.result {
             case .success(_):
                 let decoder = JSONDecoder()
