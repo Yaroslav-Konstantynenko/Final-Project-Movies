@@ -16,9 +16,16 @@ class RealmManegerTv {
     var realm = try? Realm()
     
     // Save TV in Realm
-    func saveRealmTv(_ value: String) {
+    func saveRealmTv(_ value: TopTv) {
         let tv = ModelRealmTv()
-        tv.title = value
+        
+        tv.title = value.originalName
+        tv.mainImage = value.backdropPath
+        tv.id = value.id
+        tv.rating = value.voteAverage
+        tv.overview = value.overview
+        tv.releasData = value.firstAirDate
+        tv.media = value.mediaType
         
         try? realm?.write {
             realm?.add(tv)

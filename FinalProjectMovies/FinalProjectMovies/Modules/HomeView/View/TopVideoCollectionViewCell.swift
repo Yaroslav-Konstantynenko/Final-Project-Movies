@@ -25,30 +25,32 @@ class TopVideoCollectionViewCell: UICollectionViewCell {
         configurCell()
     }
     
-    func updateDataMovieDay(model: TopMovies) {
-        let posterPath = model.backdropPath
+    func updateDataMovieDay(model: ModelRealmMovies) {
+        
+        let posterPath = model.mainImage
         let urlString = Constant.network.defaultImagePath + posterPath
         mainImageView.kf.setImage(with: URL(string: urlString))
         
-        let formatDouble = String(format: "%.1f", model.voteAverage)
-        
+        let formatDouble = String(format: "%.1f", model.rating)
         numberRatingLabel.text = formatDouble
-        titleMovieLabel.text = model.originalTitle
+        
+        titleMovieLabel.text = model.title
         descriptionMovieLabel.text = model.overview
-        dataMovieLabel.text = model.releaseDate
+        dataMovieLabel.text = model.releasData
     }
     
-    func updateDataTvDay(model: TopTv) {
-        let posterPath = model.backdropPath
+    func updateDataTvDay(model: ModelRealmTv) {
+        
+        let posterPath = model.mainImage
         let urlString = Constant.network.defaultImagePath + posterPath
         mainImageView.kf.setImage(with: URL(string: urlString))
         
-        let formatDouble = String(format: "%.1f", model.voteAverage)
-        
+        let formatDouble = String(format: "%.1f", model.rating)
         numberRatingLabel.text = formatDouble
-        titleMovieLabel.text = model.originalName
+        
+        titleMovieLabel.text = model.title
         descriptionMovieLabel.text = model.overview
-        dataMovieLabel.text = model.firstAirDate
+        dataMovieLabel.text = model.releasData
         
     }
     

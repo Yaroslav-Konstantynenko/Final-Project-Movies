@@ -9,13 +9,13 @@ import UIKit
 import Kingfisher
 
 class AllTvCollectionViewCell: UICollectionViewCell {
-
-    @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var mainImageView: UIImageView!
-    @IBOutlet weak var titleView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var reitingView: UIView!
-    @IBOutlet weak var reintingLabel: UILabel!
+    
+    @IBOutlet private weak var mainView: UIView!
+    @IBOutlet private weak var mainImageView: UIImageView!
+    @IBOutlet private weak var titleView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var reitingView: UIView!
+    @IBOutlet private weak var reintingLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,24 +23,17 @@ class AllTvCollectionViewCell: UICollectionViewCell {
         configureCell()
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        mainImageView.image = nil
-        titleLabel.text = nil
-        reintingLabel.text = nil
-    }
-    
     func updateAllTvCell(model: TvWeek) {
-        let formatDouble = String(format: "%.1f", model.voteAverage)
+        titleLabel.text = model.originalName
         
         let posterPath = model.backdropPath
         let urlString = Constant.network.defaultImagePath + posterPath
         mainImageView.kf.setImage(with: URL(string: urlString))
         
-        titleLabel.text = model.originalName
+        let formatDouble = String(format: "%.1f", model.voteAverage)
         reintingLabel.text = formatDouble
     }
-
+    
     private func configureCell() {
         mainView.layer.cornerRadius = 10
         mainImageView.layer.cornerRadius = 10

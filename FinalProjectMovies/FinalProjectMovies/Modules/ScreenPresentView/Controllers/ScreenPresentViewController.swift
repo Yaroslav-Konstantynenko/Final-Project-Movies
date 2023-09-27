@@ -8,7 +8,6 @@
 import UIKit
 import Kingfisher
 import YouTubeiOSPlayerHelper
-import Alamofire
 
 class ScreenPresentViewController: UIViewController {
     
@@ -18,8 +17,8 @@ class ScreenPresentViewController: UIViewController {
     @IBOutlet private weak var dataReleaseLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     
-    @IBOutlet weak var mainSaveView: UIView!
-    @IBOutlet weak var saveInsideView: UIView!
+    @IBOutlet private weak var mainSaveView: UIView!
+    @IBOutlet private weak var saveInsideView: UIView!
     
     
     @IBOutlet private weak var titleView: UIView!
@@ -27,15 +26,15 @@ class ScreenPresentViewController: UIViewController {
     @IBOutlet private weak var dadaReleaseView: UIView!
     @IBOutlet private weak var descriptionView: UIView!
     
-    @IBOutlet weak var videoPlayerView: YTPlayerView!
+    @IBOutlet private weak var videoPlayerView: YTPlayerView!
     
     var mainimage: String = ""
     var maintitle: String = ""
     var raiting: Double = 0.0
     var releas: String = ""
     var descriptionMovie: String = ""
-    
     var media: String = ""
+    
     // Video player
     var idMovies: Int = 0
     var keyVideo: String = ""
@@ -50,12 +49,11 @@ class ScreenPresentViewController: UIViewController {
     
     @IBAction func saveMovieButtonAction(_ sender: Any) {
         RealmManegerBookmarks.shered.savePost(maintitle)
-        BookmarksViewController().bookmarksSaveList = RealmManegerBookmarks.shered.getPost()
         
         let alert = UIAlertController(title: "Save Movie 🍿",
                                       message: nil,
                                       preferredStyle: UIAlertController.Style.alert)
-
+        
         alert.addAction(UIAlertAction(title: "Ok",
                                       style: UIAlertAction.Style.default,
                                       handler: nil))

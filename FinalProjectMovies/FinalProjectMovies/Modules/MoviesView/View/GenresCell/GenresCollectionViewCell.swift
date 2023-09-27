@@ -12,8 +12,6 @@ class GenresCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var mainContentView: UIView!
     @IBOutlet private weak var titleLable: UILabel!
     
-    //var idGenres = 44
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,7 +20,6 @@ class GenresCollectionViewCell: UICollectionViewCell {
     
     func updateGenresCell(model: Genres) {
         titleLable.text = model.name
-        //idGenres = model.id
     }
     
     private func configurCell() {

@@ -108,7 +108,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's trending now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhg-Ex-q2k">
-                                <rect key="frame" x="120.5" y="127" width="173" height="22"/>
+                                <rect key="frame" x="120" y="127" width="174" height="22"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                 <color key="textColor" red="0.42514354924004999" green="0.2503391771798778" blue="0.62329332756273681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -211,17 +211,17 @@
                                     <constraint firstItem="1be-yT-Aut" firstAttribute="leading" secondItem="tK1-aI-C1S" secondAttribute="leading" id="d50-it-Nvp"/>
                                 </constraints>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMB-iL-quc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMB-iL-quc">
                                 <rect key="frame" x="164" y="92" width="86" height="27"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                 <color key="textColor" red="0.56289503307573385" green="0.14661711108850689" blue="0.24783452399119962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="captain_america" translatesAutoresizingMaskIntoConstraints="NO" id="pJp-wT-drX">
-                                <rect key="frame" x="268" y="0.0" width="207" height="262"/>
+                                <rect key="frame" x="274" y="3" width="200" height="230"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="262" id="2DD-e6-E83"/>
-                                    <constraint firstAttribute="width" constant="207" id="ZtC-Xe-E5r"/>
+                                    <constraint firstAttribute="height" constant="230" id="Ogs-Jq-FC8"/>
+                                    <constraint firstAttribute="width" constant="200" id="WVt-IN-7Qc"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -230,12 +230,12 @@
                         <constraints>
                             <constraint firstItem="lhg-Ex-q2k" firstAttribute="centerX" secondItem="aeA-iW-Wlk" secondAttribute="centerX" id="04L-MZ-SUW"/>
                             <constraint firstItem="UMB-iL-quc" firstAttribute="centerX" secondItem="aeA-iW-Wlk" secondAttribute="centerX" id="3QQ-3E-QZ8"/>
+                            <constraint firstItem="tK1-aI-C1S" firstAttribute="top" secondItem="pJp-wT-drX" secondAttribute="bottom" constant="-80" id="5q0-KX-Tyi"/>
                             <constraint firstItem="Wr7-3U-PK8" firstAttribute="bottom" secondItem="tK1-aI-C1S" secondAttribute="bottom" constant="20" id="6uD-XJ-8P5"/>
                             <constraint firstItem="lhg-Ex-q2k" firstAttribute="top" secondItem="UMB-iL-quc" secondAttribute="bottom" constant="8" id="Dw9-XC-Hte"/>
-                            <constraint firstItem="pJp-wT-drX" firstAttribute="leading" secondItem="UMB-iL-quc" secondAttribute="trailing" constant="18" id="KV5-Dg-t1a"/>
-                            <constraint firstItem="pJp-wT-drX" firstAttribute="top" secondItem="aeA-iW-Wlk" secondAttribute="top" id="QiY-c8-Qjr"/>
                             <constraint firstItem="tK1-aI-C1S" firstAttribute="top" secondItem="lhg-Ex-q2k" secondAttribute="bottom" constant="4" id="Uf2-1t-FHX"/>
                             <constraint firstItem="1be-yT-Aut" firstAttribute="width" secondItem="aeA-iW-Wlk" secondAttribute="width" id="ZcY-vS-Scm"/>
+                            <constraint firstItem="pJp-wT-drX" firstAttribute="leading" secondItem="lhg-Ex-q2k" secondAttribute="trailing" constant="-20" id="aqu-ag-JoW"/>
                             <constraint firstItem="tK1-aI-C1S" firstAttribute="leading" secondItem="Wr7-3U-PK8" secondAttribute="leading" id="bzB-tC-xoX"/>
                             <constraint firstItem="tK1-aI-C1S" firstAttribute="trailing" secondItem="Wr7-3U-PK8" secondAttribute="trailing" id="unW-yj-QqN"/>
                             <constraint firstItem="UMB-iL-quc" firstAttribute="top" secondItem="Wr7-3U-PK8" secondAttribute="top" id="yTI-ev-a1s"/>
@@ -250,7 +250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbE-IQ-VHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1158.0152671755725" y="710.56338028169023"/>
+            <point key="canvasLocation" x="-1159.4202898550725" y="710.49107142857144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rcd-Oc-Wl2">
@@ -674,7 +674,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ozQ-c1-1It"/>
+        <segue reference="cgI-mo-H17"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bookmark.fill" catalog="system" width="110" height="128"/>

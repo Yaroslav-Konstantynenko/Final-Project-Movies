@@ -14,24 +14,27 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var moviesCollectionView: UICollectionView!
     @IBOutlet weak var tvColllectionView: UICollectionView!
     
-    var homeScreenMoviesCollection: [TopMovies] = []
-    var homeScreenTvCollection: [TopTv] = []
-    
-    var moviesTopWeek: [AllMovies] = []
-    var tvTopWeek: [TvWeek] = []
+    var homeScreenMoviesCollection: [ModelRealmMovies] = []
+    var homeScreenTvCollection: [ModelRealmTv] = []
     
     var segmentIndex = 0
-    //var saveMovies: [Any] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.customColorGradientMainView()
         registerCell()
-        
+        fetchMoview()
+    }
+    
+    private func fetchMoview() {
         GetNetworkData.shered.getTrendingMoviesDay { result in
             switch result {
             case .success(let movies):
-                self.homeScreenMoviesCollection = movies
+                for value in movies {
+                    RealmManegerMovies.shered.saveRealmMovies(value)
+                }
+                
+                self.homeScreenMoviesCollection = RealmManegerMovies.shered.getRealmMovies()
                 self.moviesCollectionView.reloadData()
                 
             case .failure(let error):
@@ -42,7 +45,11 @@ class HomeViewController: UIViewController {
         GetNetworkData.shered.getTrendingTvDay { result in
             switch result {
             case .success(let tv):
-                self.homeScreenTvCollection = tv
+                for value in tv {
+                    RealmManegerTv.shered.saveRealmTv(value)
+                }
+                
+                self.homeScreenTvCollection = RealmManegerTv.shered.getRealmTv()
                 self.tvColllectionView.reloadData()
                 
             case .failure(let error):
@@ -53,6 +60,7 @@ class HomeViewController: UIViewController {
     
     private func registerCell() {
         moviesCollectionView.register(UINib(nibName: "TopVideoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "TopVideoCollectionViewCell")
+        
         tvColllectionView.register(UINib(nibName: "TopVideoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "TopVideoCollectionViewCell")
     }
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 class BookmarksTableViewCell: UITableViewCell {
-
+    
     @IBOutlet private weak var mainView: UIView!
     @IBOutlet private weak var mainImageView: UIImageView!
     @IBOutlet private weak var backgroundLabelView: UIView!

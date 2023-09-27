@@ -17,6 +17,7 @@ extension BookmarksViewController: UITableViewDataSource {
         
         let list = bookmarksSaveList[indexPath.row]
         cell.titleLabel.text = list.title
+        
         return cell
     }
 }
@@ -34,11 +35,11 @@ extension BookmarksViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
-            // Remove product from Realm
+            // Remove post from Realm
             let title = bookmarksSaveList[indexPath.row]
             RealmManegerBookmarks.shered.deletePost(title: title)
             
-            //Remove product from TableView
+            //Remove post from TableView
             bookmarksSaveList.remove(at: indexPath.row)
             bookmarksTableView.deleteRows(at: [indexPath], with: .left)
         }

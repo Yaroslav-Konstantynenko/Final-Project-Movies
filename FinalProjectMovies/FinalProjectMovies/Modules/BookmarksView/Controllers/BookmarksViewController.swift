@@ -10,22 +10,18 @@ import UIKit
 class BookmarksViewController: UIViewController {
     
     @IBOutlet weak var bookmarksTableView: UITableView!
+    
     var bookmarksSaveList: [ModelRealmBookMarks] = []
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.customColorGradientMainView()
+        registerBookmarksCell()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updatePost()
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.customColorGradientMainView()
-        registerBookmarksCell()
-        
-        //updatePost()
-        
-
     }
     
     private func updatePost() {

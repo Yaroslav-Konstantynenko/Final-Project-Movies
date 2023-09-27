@@ -233,7 +233,6 @@
 		2A697B942AAF5B6200519306 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2AF0E38E2AAF7E3100FAFB70 /* UIColorExtension.swift */,
 				2AF0E3902AAF83D300FAFB70 /* ColorViewExtension.swift */,
 				2A3794D62AB6E9B500856CF2 /* CollectionView.swift */,
 			);
@@ -280,25 +279,10 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		2A697B9A2AAF5BBE00519306 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		2A697B9B2AAF5BC800519306 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		2A697B9C2AAF5DE000519306 /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				2A697B9A2AAF5BBE00519306 /* Model */,
-				2A697B9B2AAF5BC800519306 /* View */,
+				2AFD0B8C2AC436CC00DAFCB4 /* Extensions */,
 				2A697B992AAF5BB500519306 /* Controllers */,
 			);
 			path = MainTabBar;
@@ -337,7 +321,6 @@
 		2A697BA12AAF660E00519306 /* BookmarksView */ = {
 			isa = PBXGroup;
 			children = (
-				2A697BB02AAF670C00519306 /* Model */,
 				2A697BAF2AAF670700519306 /* View */,
 				2A697BAE2AAF66FC00519306 /* Controllers */,
 			);
@@ -442,13 +425,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		2A697BB02AAF670C00519306 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		2ACBD7A42AB35A550056AD2C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +457,14 @@
 			);
 			name = ModelMovies;
 			path = ModelData/ModelMovies;
+			sourceTree = "<group>";
+		};
+		2AFD0B8C2AC436CC00DAFCB4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2AF0E38E2AAF7E3100FAFB70 /* UIColorExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

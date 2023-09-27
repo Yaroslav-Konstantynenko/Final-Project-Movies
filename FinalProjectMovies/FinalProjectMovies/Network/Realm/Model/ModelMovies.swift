@@ -15,4 +15,5 @@ class ModelRealmMovies: Object {
     @objc dynamic var releasData = ""
     @objc dynamic var rating = 0.0
     @objc dynamic var overview = ""
+    @objc dynamic var media = ""
 }

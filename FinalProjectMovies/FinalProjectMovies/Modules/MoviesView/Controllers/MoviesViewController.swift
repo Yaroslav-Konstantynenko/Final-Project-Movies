@@ -23,9 +23,11 @@ class MoviesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.customColorGradientMainView()
-        
         registerCell()
-        
+        fetchMoview()
+    }
+    
+    private func fetchMoview() {
         GetNetworkData.shered.getGenresMovies { result in
             switch result {
             case .success(let ganre):

@@ -14,7 +14,7 @@ struct ModelTvWeek: Codable {
     let page: Int
     let results: [TvWeek]
     let totalPages, totalResults: Int
-
+    
     enum CodingKeys: String, CodingKey {
         case page, results
         case totalPages = "total_pages"
@@ -36,7 +36,7 @@ struct TvWeek: Codable {
     let voteAverage: Double
     let voteCount: Int
     let originCountry: [String]
-
+    
     enum CodingKeys: String, CodingKey {
         case adult
         case backdropPath = "backdrop_path"

@@ -17,7 +17,6 @@ class RealmManegerMovies {
     
     // Save Movie in ModelRealmMovies
     func saveRealmMovies(_ value: TopMovies) {
-        
         let movie = ModelRealmMovies()
         
         movie.title = value.title
@@ -26,6 +25,7 @@ class RealmManegerMovies {
         movie.rating = value.voteAverage
         movie.overview = value.overview
         movie.releasData = value.releaseDate
+        movie.media = value.mediaType
         
         try? realm?.write {
             realm?.add(movie)
@@ -43,6 +43,12 @@ class RealmManegerMovies {
         }
         return movie
     }
+    
+    func clearAllMovies() {
+           try? realm?.write {
+               realm?.deleteAll()
+           }
+       }
     
     // Delete Movie in ModelRealmMovies
     func deleteMovie(movie: ModelRealmMovies) {

@@ -10,13 +10,11 @@ import Kingfisher
 
 class AllMoviesCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var mainView: UIView!
+    @IBOutlet private weak var mainView: UIView!
     @IBOutlet private weak var mainImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet weak var raitingView: UIView!
-    
-    @IBOutlet weak var titleView: UIView!
-
+    @IBOutlet private weak var raitingView: UIView!
+    @IBOutlet private weak var titleView: UIView!
     @IBOutlet private weak var reitingLabel: UILabel!
     
     
@@ -26,21 +24,14 @@ class AllMoviesCollectionViewCell: UICollectionViewCell {
         configurAllMovies()
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        mainImageView.image = nil
-        titleLabel.text = nil
-        reitingLabel.text = nil
-    }
-    
     func updateAllMovies(model: AllMovies) {
-        let formatDouble = String(format: "%.1f", model.voteAverage)
+        titleLabel.text = model.originalTitle
         
         let posterPath = model.backdropPath
         let urlString = Constant.network.defaultImagePath + posterPath
         mainImageView.kf.setImage(with: URL(string: urlString))
         
-        titleLabel.text = model.originalTitle
+        let formatDouble = String(format: "%.1f", model.voteAverage)
         reitingLabel.text = formatDouble
     }
     

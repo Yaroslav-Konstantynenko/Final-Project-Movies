@@ -12,6 +12,7 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == moviesCollectionView {
             return homeScreenMoviesCollection.count
+            
         } else {
             return homeScreenTvCollection.count
         }
@@ -25,6 +26,7 @@ extension HomeViewController: UICollectionViewDataSource {
             cell.updateDataMovieDay(model: modelMovies)
             
             return cell
+            
         } else {
             let modelTv = homeScreenTvCollection[indexPath.row]
             cell.updateDataTvDay(model: modelTv)
@@ -33,7 +35,6 @@ extension HomeViewController: UICollectionViewDataSource {
         }
     }
 }
-
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -48,24 +49,24 @@ extension HomeViewController: UICollectionViewDelegate {
         if let vc = main.instantiateViewController(withIdentifier: "ScreenPresentViewController") as? ScreenPresentViewController {
             
             if collectionView == moviesCollectionView {
-                vc.mainimage = homeScreenMoviesCollection[indexPath.row].backdropPath
-                vc.maintitle = homeScreenMoviesCollection[indexPath.row].originalTitle
-                vc.raiting = homeScreenMoviesCollection[indexPath.row].voteAverage
-                vc.releas = homeScreenMoviesCollection[indexPath.row].releaseDate
+                vc.mainimage = homeScreenMoviesCollection[indexPath.row].mainImage
+                vc.maintitle = homeScreenMoviesCollection[indexPath.row].title
+                vc.raiting = homeScreenMoviesCollection[indexPath.row].rating
+                vc.releas = homeScreenMoviesCollection[indexPath.row].releasData
                 vc.descriptionMovie = homeScreenMoviesCollection[indexPath.row].overview
                 vc.idMovies = homeScreenMoviesCollection[indexPath.row].id
-                vc.media = homeScreenMoviesCollection[indexPath.row].mediaType
+                vc.media = homeScreenMoviesCollection[indexPath.row].media
                 
                 navigationController?.pushViewController(vc, animated: true)
                 
             } else {
-                vc.mainimage = homeScreenTvCollection[indexPath.row].backdropPath
-                vc.maintitle = homeScreenTvCollection[indexPath.row].originalName
-                vc.raiting = homeScreenTvCollection[indexPath.row].voteAverage
-                vc.releas = homeScreenTvCollection[indexPath.row].firstAirDate
+                vc.mainimage = homeScreenTvCollection[indexPath.row].mainImage
+                vc.maintitle = homeScreenTvCollection[indexPath.row].title
+                vc.raiting = homeScreenTvCollection[indexPath.row].rating
+                vc.releas = homeScreenTvCollection[indexPath.row].releasData
                 vc.descriptionMovie = homeScreenTvCollection[indexPath.row].overview
                 vc.idMovies = homeScreenTvCollection[indexPath.row].id
-                vc.media = homeScreenTvCollection[indexPath.row].mediaType
+                vc.media = homeScreenTvCollection[indexPath.row].media
                 
                 navigationController?.pushViewController(vc, animated: true)
             }

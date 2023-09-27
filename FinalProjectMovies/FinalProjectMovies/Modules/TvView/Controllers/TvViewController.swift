@@ -12,17 +12,21 @@ class TvViewController: UIViewController {
     @IBOutlet weak var allTvCollectionView: UICollectionView!
     
     var allTvScreenCollection: [TvWeek] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.customColorGradientMainView()
         tegisterCell()
-        
+        fetchMoview()
+    }
+    
+    private func fetchMoview() {
         GetNetworkData.shered.getAllTv { result in
             switch result {
             case .success(let tv):
                 self.allTvScreenCollection = tv
                 self.allTvCollectionView.reloadData()
+                
             case .failure(let error):
                 print("Помилка, данні не додалися в колекцію All TV: \(error)")
             }

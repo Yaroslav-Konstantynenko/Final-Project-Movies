@@ -12,6 +12,7 @@ extension MoviesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == genresCollectionView {
             return moviesGenresScrrenCollection.count
+            
         } else {
             if idGenres != 0 {
                 return moviesGanresId.count
@@ -37,6 +38,7 @@ extension MoviesViewController: UICollectionViewDataSource {
             if idGenres != 0 {
                 let modeAllMovie = moviesGanresId[indexPath.row]
                 cellAllMovies.updateAllMovies(model: modeAllMovie)
+                
             } else {
                 let modeAllMovie = allMoviesScrrenCollection[indexPath.row]
                 cellAllMovies.updateAllMovies(model: modeAllMovie)
@@ -62,6 +64,7 @@ extension MoviesViewController: UICollectionViewDelegate {
                     vc.media = moviesGanresId[indexPath.row].mediaType
                     
                     navigationController?.pushViewController(vc, animated: true)
+                    
                 } else {
                     vc.mainimage = allMoviesScrrenCollection[indexPath.row].backdropPath
                     vc.maintitle = allMoviesScrrenCollection[indexPath.row].originalTitle
@@ -74,6 +77,7 @@ extension MoviesViewController: UICollectionViewDelegate {
                     navigationController?.pushViewController(vc, animated: true)
                 }
             }
+            
         } else {
             idGenres = moviesGenresScrrenCollection[indexPath.row].id
             
@@ -95,6 +99,7 @@ extension MoviesViewController: UICollectionViewDelegateFlowLayout {
         
         if collectionView == genresCollectionView {
             return CGSize(width: 70, height: 25)
+            
         } else {
             return CGSize(width: 350, height: 300)
         }
