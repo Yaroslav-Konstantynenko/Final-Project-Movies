@@ -60,3 +60,7 @@ class TopVideoCollectionViewCell: UICollectionViewCell {
         descriptionView.layer.cornerRadius = 5
     }
 }
+
+
+
+
