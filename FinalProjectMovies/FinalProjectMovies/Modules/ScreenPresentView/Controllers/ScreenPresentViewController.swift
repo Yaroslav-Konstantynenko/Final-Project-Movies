@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 import YouTubeiOSPlayerHelper
 
-class ScreenPresentViewController: UIViewController {
+class ScreenPresentDescriptionViewController: UIViewController {
     
     @IBOutlet private weak var mainImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
@@ -19,7 +19,6 @@ class ScreenPresentViewController: UIViewController {
     
     @IBOutlet private weak var mainSaveView: UIView!
     @IBOutlet private weak var saveInsideView: UIView!
-    
     
     @IBOutlet private weak var titleView: UIView!
     @IBOutlet private weak var raitingView: UIView!

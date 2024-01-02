@@ -344,6 +344,32 @@
             </objects>
             <point key="canvasLocation" x="1000.763358778626" y="710.56338028169023"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="l7U-Kv-WXd">
+            <objects>
+                <viewController id="HNk-A4-hpY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aag-ZA-BPi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ran-L4-0d2">
+                                <rect key="frame" x="142" y="433" width="131" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.18170145160000001" green="0.36817446619999999" blue="0.30917288990000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MaU-Jj-ajg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KtC-Ta-V3D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1564" y="1519"/>
+        </scene>
         <!--ТВ-->
         <scene sceneID="n7m-cg-7dK">
             <objects>
@@ -674,7 +700,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ozQ-c1-1It"/>
+        <segue reference="gbn-jd-Y84"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bookmark.fill" catalog="system" width="110" height="128"/>
@@ -691,6 +717,9 @@
         <image name="spider_man_PNG89" width="533.5" height="522"/>
         <image name="superman" width="539.5" height="316"/>
         <image name="tv" catalog="system" width="128" height="95"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

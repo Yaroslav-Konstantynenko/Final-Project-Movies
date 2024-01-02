@@ -7,7 +7,7 @@
 
 import UIKit
 import Alamofire
-
+import SystemConfiguration
 
 class HomeViewController: UIViewController {
     
@@ -23,7 +23,12 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.customColorGradientMainView()
         registerCell()
-        fetchMoview()
+        if GetNetworkData.shered.isInternetAvailable() {
+            print("Internet Connect")
+            fetchMoview()
+        } else {
+            print("No connect Internet")
+        }
     }
     
     private func fetchMoview() {
