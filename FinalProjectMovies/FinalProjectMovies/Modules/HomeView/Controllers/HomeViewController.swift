@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
             fetchMoview()
         } else {
             print("No connect Internet")
+            print("No connect Internet")
         }
     }
     
